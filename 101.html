@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/1011.jfif","./img/north/1012.jpg","./img/north/1013.jpg","./img/north/1014.jpg","./img/north/1015.jpg"]
+    var small=["small0","small1","small2","small3","small4"]
+    var words=["Taipei 101","The appearance of 101 is in the shape of Chinese  character 鼎(Ding)","Fireworks displayed in Taipei 101 during the New Year's Eve ",
+    "Observatory is in the 89th floor","The whole cityscape of Taipei City can be overlooked at the observatory"
+     ]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Taipei 101</font></p>
+    <p align="center">Taipei City</p>
+   <img src="./img/north/1011.jfif" width="800" id="demo">
+   <p id="desc">Taipei 101</p>
+   <img src="./img/north/1011.jfif" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/1012.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/1013.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/1014.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/north/1015.jpg" width="130" onclick="change(4)" id="small4" >
+   <p><font size="8">T</font><font size="3">he Taipei 101 is a landmark supertall skyscraper in Xinyi District. It is 509.2m in height and was the world's tallest<br> 
+    building until the Burj Khalifa in Dubai was constructed in 2010. The appearance of 101 is designed in the shape of Chinese<br>
+    character "鼎(Ding)", which symbolize the money boxes in Chinese culture. To strengthen the resistace of earthquakes and<br>
+    typhoons, a 660-tonne steel pendulum with 5.5m in diameter is suspended from the 92nd to the 87th floor and serves as a  <br>
+    tuned mass damper. The pendulum sways to offset movements in the building caused by strong gusts. In the 89th floor is <br>
+    the observatory, which can overlook the whole Taipei City. During the New Year's Eve, the fireworks displayed in Taipei 101<br>
+    is the most anticipated part of the New Year's Eve show in Taipei.</font></p>
+    <ul>
+        <li>Official Website: <a href="https://www.taipei-101.com.tw/en/index.aspx" target="_blank">https://www.taipei-101.com.tw/en/index.aspx</a></li>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:
+            MRT Taipei 101 station.<br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.003246729964!2d121.56228351500631!3d25.03396388397233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da9c9e1f%3A0x1206bcf082fd10a6!2sTaipei+101%2C+No.+7%2C+Section+5%2C+Xinyi+Road%2C+Xinyi+District%2C+Taipei+City%2C+110!5e0!3m2!1sen!2stw!4v1530328390206" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

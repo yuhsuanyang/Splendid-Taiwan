@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/kuantuzling1.jpg","./img/south/kuantuzling2.jpg"]
+    var small=["small0","small1"]
+    var words=["Fire and Water Spring","Guanziling Hot Spring"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Guanziling</font></p>
+    <p align="center">Tainan City</p>
+   <img src="./img/south/kuantuzling1.jpg" width="800" id="demo">
+   <p id="desc">Fire and Water Spring</p>
+   <img src="./img/south/kuantuzling1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/kuantuzling2.jpg" width="130" onclick="change(1)" id="small1" >
+   <p><font size="8">F</font><font size="3">ire and Water Spring has been here for about 300 years and it is the landmark at Guanziling.<br>
+    Methane is emitted from the cliff gap, lighted up, and water flows from the cliff in the meantime, results in <br>
+    the spectacle of the coexistance of fire and water. The Guanziling Hot Spring is a alkaline carbonated mud spring with  <br>
+	the spring water of 75 degree Celsuis. Containing the rare material radium, it is also called <br>
+	"The Best Spiritual Spring in the world" and can benefit one's health and beauty.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:<br>
+            The nearest train station is the Hsinying station.
+            Public bus service to the area is available from #66 bus.</li>
+    </ul>
+    
+</div>
+	
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35357.54768408283!2d120.48047543348518!3d23.34398569349462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e8d68a4cff7b7%3A0x5502d7a0881b79bd!2zNzMyLCBUYWluYW4gQ2l0eSwgQmFpaGUgRGlzdHJpY3QsIOmXnOWtkOW2ug!5e0!3m2!1sen!2stw!4v1529068428868"
+	width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

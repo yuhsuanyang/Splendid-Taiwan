@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/ymmt1.jpg","./img/north/ymmt2.jpg","./img/north/ymmt3.jpg","./img/north/ymmt4.jpg","./img/north/ymmt5.jpg","./img/north/ymmt6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Calla lily in Zhuzihu","Hydrangea in Zhuzihu"," Datun Mountain ","Yangmingshan Flower Clock","Qingtiangang","Daton National Park"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Yangmingshan National Park</font></p>
+    <p align="center">Taipei City</p>
+   <img src="./img/north/ymmt1.jpg" width="800" id="demo">
+   <p id="desc">Calla lily in Zhuzihu</p>
+   <img src="./img/north/ymmt1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/ymmt2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/ymmt3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/ymmt4.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/north/ymmt5.jpg" width="130" onclick="change(4)" id="small4" >
+   <img src="./img/north/ymmt6.jpg" width="130" onclick="change(5)" id="small5" >
+   <p><font size="8">Y</font><font size="3">angmingshan National Park is located in the north of Beitou. The National Park is famous for its sulfur deposits,<br>
+    , flora, fumaroles, and hiking trails, including Taiwan's tallest dormant volcano, Seven Star Mountain.<br> 
+    The park is characterized by a large clock made of flowers with a diameter of 22 feet, and the best place for flower<br>
+    viewing is Zhuzihu. The Zhuzihu Calla Lily Festival will kick-off at the end of March every year. After the  <br>
+    Calla Lily Festival is the season for hydrangea. Daton mountain is a active volcanic group. Althought the last eruption<br>
+    occured at about 5000 years ago, the gas fumaroles are still explusing sulfur deposits nowadays. The best season of the<br>
+    Daton National Park is October and November, when the miscanthus blooms. Qingtiangang is a lava terrace.<br>
+    Because of its flat terrain, a ranch was established and the area was used as a pasture for grazing cattle during the<br>
+    Japanese occupation. The scenery of the broad glassland is one of the most popular tourist spot in this region.</font></p>
+    <ul>
+        <li>Official website: <a href="http://english.ymsnp.gov.tw/index.php?option=com_content&view=featured&gp=0&Itemid=104">http://english.ymsnp.gov.tw/index.php?option=com_content&view=featured&gp=0&Itemid=104</a></li>
+        <li>Best seasons: Spring</li>
+        <li>Transportation:
+            Take the MRT to Beitou Station and take bus #S9 or #129 <br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107490.17648269807!2d121.46171866229882!3d25.18389183460885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442adf824cfc74b%3A0x5c0be3a34fc3b079!2sYangmingshan+National+Park!5e0!3m2!1sen!2stw!4v1530331348547" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

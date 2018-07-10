@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/lotung1.jpg","./img/north/lotung2.jpg","./img/north/lotung3.jpg","./img/north/lotung4.jpg","./img/north/lotung5.jpg","./img/north/lotung6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5","small6"]
+    var words=["Lotong Sports Park","Lotong Sports Park","Taxodium in the Lotong Sports Park will turn yellow in winter","Lotung Nightmarket","Ox-tongue-shaped pastry"
+                ,"Iced tapioca with red bean stuffed"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Lotung</font></p>
+    <p align="center">Ilan County</p>
+   <img src="./img/north/lotung1.jpg" width="800" id="demo">
+   <p id="desc">Lotong Sports Park</p>
+   <img src="./img/north/lotung1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/lotung2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/lotung3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/lotung4.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/north/lotung5.jpg" width="130" onclick="change(4)" id="small4" >
+   <img src="./img/north/lotung6.jpg" width="130" onclick="change(5)" id="small5" >
+   <p><font size="8">L</font><font size="3">otung Township is an urban township in the central part of Yilan County. Although it is the smallest township  <br> 
+    in the county, it is the best-known area. Lotong Sports Park is the most famous tourist spot in Lotong. <br>
+    The park covers 47 hectares of land and it includes a range of facilities for sport and a swimming pool.<br>
+    The park is divided into four sections that include; forest area, sport area, waterscapes, and other landscapes such as <br>
+    lakes and the taxodium which turns yellow during the winter. Lotung Nightmarket is one of the largest and crowed  <br>
+    nightmarket in Taiwan. The night market offers local snacks such as such as ox-tongue-shaped pastry and<br>
+    iced tapioca with red bean stuffed.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:
+            Luodong is served by the Yilan Line of Taiwan Railway Administration at the Luodong Station.<br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24213.600408626797!2d121.76561360813723!3d24.67685513348531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e5d5af835387%3A0x7842ee7fc5ee1e7f!2sLuodong%2C+Luodong+Township%2C+Yilan+County%2C+265!5e0!3m2!1sen!2stw!4v1530277229959"
+         width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

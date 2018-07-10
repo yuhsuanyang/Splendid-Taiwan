@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/east/chingsuei1.jpg","./img/east/chingsuei3.jpg","./img/east/chingsuei2.jpg"]
+    var small=["small0","small1","small2"]
+    var words=["Chingshui Cliff","Chingshui Cliff","Chingshui Cliff (aerial photography)"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Chingshui Cliff</font></p>
+    <p align="center">Hualien County</p>
+   <img src="./img/east/chingsuei1.jpg"width="800" id="demo">
+   <p id="desc">Chingshui Cliff</p>
+   <img src="./img/east/chingsuei1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/east/chingsuei3.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/east/chingsuei2.jpg" width="130" onclick="change(2)" id="small2">
+   <p><font size="8">C</font><font size="3">hingshui Cliff is a coastal cliffs averaging 800 meters above sea level in Xiulin Township, Hualien County. <br>
+    The cliff is located at the southern part of the Suhua Highway that connects the counties of Yilan and Hualien and <br>
+    is considered to be a very scenic area and is the highest coastal cliff in Taiwan. The magnificant scene of the cliffs<br>
+    results from the plate tectonics of the Philippine Sea Plate and the Eurasian Plate, and the stratum protrde above the sea level<br>
+    is composed of marbles and gneiss.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation: <br>
+            Qingshui Cliff is accessible southwest from Heren Station of the Taiwan Railway Administration.
+           
+    </ul>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14554.364052099085!2d121.68644659588112!3d24.221099535980613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34662bbc59bb7d23%3A0x418f58180968f4b!2sQingshui+Duanyai!5e0!3m2!1szh-TW!2stw!4v1529293683506"
+     width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

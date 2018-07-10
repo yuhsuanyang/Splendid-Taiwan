@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/loveriver1.jpg","./img/south/loveriver2.JPG","./img/south/loveriver3.jpg","./img/south/loveriver4.jpg","./img/south/loveriver5.jpg"]
+    var small=["small0","small1","small2","small3","small4"]
+    var words=["The Riverside of Love River","Love Boat","Latern Festival at Love River","Heart of Love River Ruyi Lake","Dragon Boat Competition at Love River"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Love River</font></p>
+    <p align="center">Kaohsiung City</p>
+   <img src="./img/south/loveriver1.jpg" width="800" id="demo">
+   <p id="desc">The Riverside of Love River</p>
+   <img src="./img/south/loveriver1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/loveriver2.JPG" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/south/loveriver3.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/south/loveriver4.jpg" width="130" onclick="change(3)" id="small3">
+   <img src="./img/south/loveriver5.jpg" width="130" onclick="change(4)" id="small4">
+   <p><font size="8">L</font><font size="3">ove River is a canal in Kaohsiung. It was once heavily polluted, when raw sewage and industrial waste water flowed<br>
+    untreated into the river. Recent efforts by the city government to divert the waste water to the treatment plant in <br>
+    Chijin District has resulted in significantly improved water quality and develop tourism. Also, many activities are held here, <br>
+    including the Latern Festival and the Dragon Boat Competition for celebrating the Dragon Boat Festival. Both taking the <br>
+    Love Boat and strolling at the riverside are recommened ways to experience the beauty of Love River. </font></p>
+
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation: The nearest Kaohsiung Light Railway Transit station is the Love Pier station.</li>
+    </ul>
+        
+    </span>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28619.297400939035!2d120.2866856150537!3d22.644903909690104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04fb21935ccd%3A0xf44e336c93ecbd!2sLove+River!5e0!3m2!1sen!2stw!4v1529003857887"
+     width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

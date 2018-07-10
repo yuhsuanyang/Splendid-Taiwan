@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/central/gookun1.jpg","./img/central/gookun2.jpg","./img/central/gookun3.jpg","./img/central/gookun4.jpg"]
+    var small=["small0","small1","small2","small3"]
+    var words=["Gukeng green tunnel","Gukeng green tunnel","Gukeng green tunnel","Gukeng green tunnel","Gukeng green tunnel"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Gukeng green tunnel</font></p>
+    <p align="center">Yunlin County</p>
+   <img src="./img/central/gookun1.jpg" width="800" id="demo">
+   <p id="desc">Gukeng green tunnel</p>
+   <img src="./img/central/gookun1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/central/gookun2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/central/gookun3.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/central/gookun4.jpg" width="130" onclick="change(3)" id="small3">
+   <p><font size="8">C</font><font size="3">hijin used to be a sand bar which is connected with the southern tip of Kaohsiung, but in 1967,this link was severed to <br>
+    create a second entry point to the Port of Kaohsiung. Being an island, Chijin is not only known for beaches and seafoods <br>
+    but also with abundant history. Chinjin Mazu Temple is the first Mazu Temple in Kaohsiung, which indicates the belif in<br>
+    Mazu in this area. The Rainbow Chruch, built in recent years, becomes a new tourist spot in Chijin, especially for those <br>
+    who come for shooting wedding pictures.<br></font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:<br>
+          The "Cross Harbor Tunnel" (Chinese: 過港隧道) connects Cijin Island and the rest of Kaohsiung on mainland Taiwan.<br>
+          Cijin District is also accessible by two ferry piers, the Cijin Ferry Pier at the northern tip of the island and<br>
+          the Zhongzhou Ferry Pier at the middle of the island.</li>
+    </ul>
+        
+    
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5035412585476!2d120.53698207152262!3d23.657944162181767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ec7ed35241fc5%3A0x3daffb235d7769c6!2z5Y-k5Z2R57eR6Imy6Zqn6YGT5LiJ5aW957Gz5LyR6ZaS6L6y5aC0IDg56L6y5aC0!5e0!3m2!1sen!2stw!4v1530333125486" width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+      
+
+</body>
+</html>

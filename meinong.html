@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/meinung1.jpg","./img/south/meinung3.jpg","./img/south/meinung2.jpg","./img/south/meinung4.jpg"]
+    var small=["small0","small1","small2","small3"]
+    var words=["Sunflower field","Cosmos flower field","Hakka oil-paper umbrella","Hakka rice noodles"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Meinong</font></p>
+    <p align="center">Kaohsiung City</p>
+   <img src="./img/south/meinung1.jpg" width="800" id="demo">
+   <p id="desc">Sunflower field</p>
+   <img src="./img/south/meinung1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/meinung3.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/south/meinung2.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/south/meinung4.jpg" width="130" onclick="change(3)" id="small3">
+   <p><font size="8">M</font><font size="3">einong is one of the four districts in Kaohsiung that is the central focus of Hakka cultural development.<br>
+    93.5% of the residents here are the Hakka people, making the regoin a countryside with Hakka livestyle. Specialty such as<br>
+    oil-paper umbrellas, rice noodles are representations for the Hakka culture. The main industries here are agriculture<br>
+    tourism. During winter,in which not being able to grow crops, flowers are planted instead to attract tourists to come <br>
+    and enjoy the magnificent flower fields.</font></p>
+    <ul>
+        <li>Best seasons: Early spring</li>
+        <li>Transportation: Public bus "Chi-mei Highway Bus"service to the area is available from THSR Zuoying Station.</li>
+    </ul>
+       
+    </span>
+    
+</div>
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168755.80074904877!2d120.47956525392907!3d22.893092648396262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e4227e7f9e4cb%3A0x8662771bab7d1866!2sMeinong+District%2C+Kaohsiung+City%2C+843!5e0!3m2!1sen!2stw!4v1529029884980" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

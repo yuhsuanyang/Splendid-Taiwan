@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/hsitzuwan1.jpg","./img/south/hsitzuwan2.jpg","./img/south/hsitzuwan3.jpg","./img/south/hsitzuwan4.jpg"]
+    var small=["small0","small1","small2","small3"]
+    var words=["Gorgeous sunset view","Sizihwan is nearby National Sun Yat-sen University","Scenery overlooked form the peak of Shoushan","Former British Consulate at Takao"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Sizihwan</font></p>
+    <p align="center">Kaohsiung City</p>
+   <img src="./img/south/hsitzuwan1.jpg" width="800" id="demo">
+   <p id="desc">Gorgeous sunset view</p>
+   <img src="./img/south/hsitzuwan1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/hsitzuwan2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/south/hsitzuwan3.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/south/hsitzuwan4.jpg" width="130" onclick="change(3)" id="small3" >
+   <p><font size="8">S</font><font size="3">izihwan is known for the brilliant colors of the sunset. This area is also connected with the campus of <br>
+    National Sun Yat-sen University by the Sizihwan Tunnel . Climbing up to the peak of Shoushan, which is a hill located<br>
+    at the north-east of Sizihwan,you can overlook the scenery of the bay and its surroundings, providing a good perseptive <br>
+    for watching the cityscape of Kaohsiung. Besides, in the 19th century, this area served as the strongpoint of trading for<br>
+    Britain, and therefore Former British Consulate at Takao was built. The architecture is of the style of late Renaissance <br>
+    and is declared to be a Second Class Historic Site nowadays. To sum up, Sizihwan is the best-recommended place for a<br>
+    relaxing walk in the evening.</font></p>
+    <ul>
+        <li>Best seasons: All year around</li>
+        <li>Transportation:<br>
+            The nearest Kaohsiung Mass Rapid Transit station is the Orange Line's terminus at Sizihwan Station.<br>
+            Public bus service to the area is available from G-Bus (zh) #99 and O1(橘1) metro shuttle bus.
+        </li>
+    </ul>
+        
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.864072275216!2d120.27233311485064!3d22.621550536873254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e040aa68c0d6d%3A0x91397913c05c684!2sSizihwan!5e0!3m2!1sen!2stw!4v1528982923072"
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

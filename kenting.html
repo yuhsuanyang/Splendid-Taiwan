@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/kenting1.jpeg","./img/south/kenting2.jpg","./img/south/kenting3.jpg","./img/south/kenting4.jpg","./img/south/kenting5.jpg","./img/south/kenting6.jfif"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Bai-Sha Bay","Kenting Night Market","National Museum of Marine Biology & Aquarum","Fongchueisha","Jialeshui",
+    "Gangkou Village, a village nearby Jialeshui, has the highest crab diversity in the world."]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Kenting</font></p>
+    <p align="center">Pingtung County</p>
+   <img src="./img/south/kenting1.jpeg" width="800" id="demo">
+   <p id="desc">Bai-Sha Bay</p>
+   <img src="./img/south/kenting1.jpeg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/kenting2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/south/kenting3.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/south/kenting4.jpg" width="130" onclick="change(3)" id="small3">
+   <img src="./img/south/kenting5.jpg" width="130" onclick="change(4)" id="small4">
+   <img src="./img/south/kenting6.jfif" width="130" onclick="change(5)" id="small5">
+   <p><font size="8">K</font><font size="3">enting National Park  is surrounded by the Pacific Ocean, the Taiwan Strait, and the Luzon Strait,covering Hengchun, <br>
+    Checheng, and Manzhou Townships. It is well known for its tropical climate and sunshine, scenic mountain, beach and <br>
+    coral reefs. Beaches sush as Nan Wan, Banana Bay and Bai-Sha Bay is famous for the water sports. The park hosts rich <br>
+    terrestrial biodiversity of mammals, birds, freshwater fish and various insects. During spring and winter, the strong  <br>
+    katabatic wind blows through this area, which boosts the growth of onions. Moreover, you can enjoy the fresh seafoods <br>
+    and even buy some at the market near the fishery harbors.</font></p>
+    <ul>
+        <li>Official Website: <a href="http://www.ktnp.gov.tw/en/Default.aspx">http://www.ktnp.gov.tw/en/Default.aspx</a></li>
+        <li>Best seasons: Summer</li>
+        <li>Transportation:<br>
+           Frequent buses link this park with Kaohsiung International Airport,<br>
+           Taiwan Railway Administration's Kaohsiung Station and Taiwan High Speed Rail's Zuoying Station.<br> 
+           One-way ride takes around 2 hours and 30 minutes.</li>
+    </ul>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d82511.18535839122!2d120.74973121328685!3d21.990097876708354!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3471b3fadac47ca3%3A0xf7179fa8495df57f!2sKenting+National+Park!5e0!3m2!1sen!2stw!4v1528880645180" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

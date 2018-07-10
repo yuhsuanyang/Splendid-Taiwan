@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/shilin1.jpg","./img/north/shilin2.jpg","./img/north/shilin3.jpg"]
+    var small=["small0","small1","small2"]
+    var words=["Shilin Nightmarket","Fried chicken fillet","Oyster omelet "]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Shilin Nightmarket</font></p>
+    <p align="center">Taipei City</p>
+   <img src="./img/north/shilin1.jpg" width="800" id="demo">
+   <p id="desc">Shilin Nightmarket</p>
+   <img src="./img/north/shilin1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/shilin2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/shilin3.jpg" width="130" onclick="change(2)" id="small2" >
+   <p><font size="8">S</font><font size="3">hilin Nightmarket is considered as the second largest nightmarket in Taiwan. The night market is located near the  <br> 
+    former location of a wharf on the Keelung River. Agricultural produce from farms in Shilin being shipped to other ports <br>
+    such as Banka and Dadaocheng would typically be sold in this area. The daytime Shilin Market was formally established<br>
+    in this area in 1909, and the market was inaugurated in 1913. With the influx of customers, many new businesses <br>
+    and food vendors began to establish themselves in the area and the Shilin Night Market was born. The Fried chicken fillet<br>
+    and the Oyster omelet are two of the must-eat snack here. Other foods like bubble tea, fried buns and stinky tofu are also <br>
+    very popular and can be considered as iconic Taiwanese snacks.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:<br>
+                Shilin Night Market is accessible via the Tamsui–Xinyi line (Taipei Metro) at Jiantan Station.<br>
+                A number of bus routes also serve the area with stops at Jiantan Station, nearby Ming Chuan University, <br>
+                and Xiao Bei (Hsiao Pei) Street.<br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.4226995743143!2d121.52296451488996!3d25.087548792296975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aeb01b1cdd87%3A0x38b15fc396173b12!2sShilin+Night+Market!5e0!3m2!1sen!2stw!4v1530275864079"
+         width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

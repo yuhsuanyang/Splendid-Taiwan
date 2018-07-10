@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/taimsui4.jpg","./img/north/taimsui1.jpg","./img/north/taimsui3.jpg","./img/north/taimsui2.jpg","./img/north/taimsui5.png"]
+    var small=["small0","small1","small2","small3"]
+    var words=["Tamsui Fisherman's Wharf","Tamsui Lover's Bridge","Tamsui Old Street","Fort San Domingo","Fried fish crackers and iron eggs"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Taimsui</font></p>
+    <p align="center">New Taipei City</p>
+   <img src="./img/north/taimsui1.jpg" width="800" id="demo">
+   <p id="desc">Tamsui Fisherman's Wharf</p>
+   <img src="./img/north/taimsui4.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/taimsui1.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/taimsui3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/taimsui2.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/north/taimsui5.png" width="130" onclick="change(4)" id="small4" >
+   <p><font size="8">T</font><font size="3">amsui is a sea-side district in New Taipei and is named after the Tamsui River. It is one of the most popular tourist  <br> 
+    attraction in Taipei because of the beautiful sunset by the sea and the historical sites. Tamsui Fisherman's Wharf <br>
+    not only serves as a fish harbor but also a spot for sunset. The Tamsui Lover's Bridge, which cross the <br>
+    Tamsui Fisherman's Wharf, will turn into different colors in the evening. The Tamsui Old Street is the teeming<br>
+    area in this district. You can find some special snacks here, such as fried fish crackers and iron eggs. <br>
+    Fort San Domingo is a historical site which was originally a wooden fort built by the Spanish in 1629 and is declared<br>
+    to be the first class National monuments. It position overlooking the mouth of the Tamsui River makes it a<br>
+    particularly attractive scenic spot.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:
+            MRT Taimsui station.<br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115538.40727683168!2d121.39372968676906!3d25.183816815226454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b01943f627e5%3A0xd240799f71d07db2!2sTamsui+District%2C+New+Taipei+City%2C+251!5e0!3m2!1sen!2stw!4v1530330610394"
+         width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

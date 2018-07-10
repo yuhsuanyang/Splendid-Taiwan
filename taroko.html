@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/east/tailugo1.jpg","./img/east/tailugo2.jpg","./img/east/tailugo6.jpg","./img/east/tailugo3.jpg","./img/east/tailugo4.jpg","./img/east/tailugo5.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Taroko Gorge and the Liwu River","Baiyang Waterfalls Trail","Cave of Water Curtain","Hehuanshan in summer","Hehuanshan is usually covered with snow in winter","Truku people"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Taroko National Park</font></p>
+    <p align="center">Hualien County</p>
+   <img src="./img/east/tailugo1.jpg" width="800" id="demo">
+   <p id="desc">Taroko Gorge and the Liwu River</p>
+   <img src="./img/east/tailugo1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/east/tailugo2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/east/tailugo6.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/east/tailugo3.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/east/tailugo4.jpg" width="130" onclick="change(4)" id="small4" >
+   <img src="./img/east/tailugo5.jpg" width="130" onclick="change(5)" id="small5" >
+   <p><font size="8">T</font><font size="3">Taroko National Park spans Taichung City, Nantou County, and Hualien County. It was named after the aboriginal tribes<br> 
+    once lived here, the Truku people. Cliffs, mountains and gorges are the features of the park. Among them, the Taroko Gorge <br>
+    is the landmark gorge of the park carved by the Liwu River. Baiyang Waterfall is a magnificent waterfall in the park,<br>
+    and the Baiyang Trail is contructed by the Taipower Company to make use of the hydraulic power in 1984. However, <br>
+    after being assessed that the area is not suitable for the construction of dams, the trail became an access for tourist <br>
+    to enjoy the beauty of the Baiyang Waterfall. In the end of the trail sits the Cave of Water Curtain. Mountain spring squirts<br> 
+    from the on the top of the rock cave, making the scenery of "the water curtain". Hehuanshan is a part of<br>
+    the Central Mountain Range. In winter, it becomes a popular tourist spot in winter for the snowy scenery, which is barely <br>
+    seen in the rest of Taiwan.</font></p>
+    <ul>
+        <li>Official Website: <a href="https://www.taroko.gov.tw/en">https://www.taroko.gov.tw/en</a></li>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:
+            Taroko National Park is accessible West from Xincheng Station of the Taiwan Railways Administration.<br>
+
+        </li>
+    </ul>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193022.1509474913!2d121.37808533490569!3d24.21436589232794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346882845fc2e7ef%3A0xddd9fd85e0b0aa31!2z5aSq6a2v6Zaj5ZyL5a625YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1529339351557" 
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

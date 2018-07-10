@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    div.content{
+        position: absolute;
+        top:25%; 
+        right: 5%;
+		width: 50%
+		
+		
+    }
+	.navbar {
+	  overflow: hidden;
+	  background-color: rgba(128,138,135,0.5);
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	  z-index:1;
+	  
+	}
+	div.innercontent{  
+	height: 250px;
+	
+	}
+    #desc{
+        color: white;
+        background-color:black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 8px;
+    }
+    #small0{
+        opacity: 0.5;
+    }
+    #info{
+        border-style: groove;
+    }
+	.auto-style1 {
+	text-align: center;
+	height:15px;
+	}
+	.auto-style2 {
+		text-align: center;
+		background-color: #ffdc35;
+		height:35px;
+	}
+	.auto-style3 {
+		text-align: center;
+		background-color: #c4e1ff;
+		height:20px;
+		
+	}
+
+	.foranchor{
+	position: fixed;
+	top:25%;
+	left: 10%;
+
+    }
+	
+	.foranchor ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: #f1f1f1;
+	}
+
+	.foranchor li a {
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+
+	.foranchor li {
+		text-align: center;
+	}
+
+	.foranchor li:last-child {
+		border-bottom: none;
+	}
+
+	.foranchor li a.active {
+		background-color: #383635;
+		color: white;
+	}
+
+	.foranchor li a:hover:not(.active) {
+		background-color: #555;
+		color: white;
+	}
+	
+	.anchor {
+    display:block;
+    padding-top:25%;
+    margin-top:-25%;
+	}
+ 
+ 
+ 
+ 
+ 
+</style>
+
+	<script>			
+			var audio1 = new Audio('sound/take me to.mp3');
+			var audio2 = new Audio('sound/next intersection.mp3');
+			var audio3 = new Audio('sound/How long take.mp3');
+			var audio4 = new Audio('sound/lost my way.mp3');
+
+
+			function chg1(){
+		
+				audio1.play();
+			}
+			function chg2(){
+
+				audio2.play();
+			}
+			function chg3(){
+
+				audio3.play();
+			}
+			function chg4(){
+
+				audio4.play();
+			}
+
+
+	</script>
+
+
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<!--<div>
+    <iframe src="./passerby-1.html" width="100%" height="1500" scrolling="no" frameborder="0"></iframe>
+</div>-->
+
+	<div class="foranchor"> <!--用來當錨點連接的-->
+		<ul>
+		  <li><a class="active">Traffic　交通篇</a></li>
+		  <li><a href="#1">take me to ___</a></li>
+		  <li><a href="#2">stop at the next intersection.</a></li>
+		  <li><a href="#3">How long</a></li>
+		  <li><a href="#4">Elost my way</a></li>
+		  <!--<li><a href="#5">Lu Rou rice & beef soup</a></li>
+		  <li><a href="#6">Fried bread stick & soy milk</a></li>
+		  <li><a href="#7">sauce into Ba wan</a></li> -->
+		</ul>
+	
+
+	</div>     
+	
+
+	
+	
+<div class="content">
+
+	<!--以此為例-->
+	<div class="innercontent">
+	<table style="width: 100%">
+		<tr>
+			<td class="auto-style2">
+			<span lang="EN-US">
+			<a id="1" class="anchor"></a> <!--成功的錨點!-->
+			<input type="button" onclick="chg1()" style="background-image:url(img/speaker.png);width:20px;height:16px;">Please take me to ___. Thank you.</span></td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Taiwanese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">chia tsài wo khì____, toh shia.</td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Chinese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">qǐng zǎi wǒ qù ____，xiè xiè </td>
+		</tr>
+		<tr>
+			<td class="auto-style1">請載我去____，謝謝。</td>
+		</tr>
+	</table>
+	</div>
+
+	
+
+
+	<div class="innercontent">
+	<table align="right" style="width: 100% ">
+		<tr>
+			<td class="auto-style2">
+			<span lang="EN-US">
+			<a id="2" class="anchor"></a>
+			<input type="button" onclick="chg2()" style="background-image:url(img/speaker.png);width:20px;height:16px;">Please stop at the next intersection.</span></td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Taiwanese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">chia d āu tsi̍t-êi lōo-kháu thîng-tshia.</td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Chinese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">qǐng zài xià gè lù kǒu tíng chē</td>
+		</tr>
+		<tr>
+			<td class="auto-style1">請在下個路口停車。</td>
+		</tr>
+	</table>
+	</div>
+	
+
+
+
+	<div class="innercontent">
+	<table align="right" style="width: 100%">
+		<tr>
+			<td class="auto-style2">
+			<span lang="EN-US">
+			<a id="3" class="anchor"></a>
+			<input type="button" onclick="chg3()" style="background-image:url(img/speaker.png);width:20px;height:16px;">How long does it take to go to ____?</span></td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Taiwanese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">kàu ____ beh guā-kú?</td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Chinese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">dào ____ xū yào duō jio?</td>
+		</tr>
+		<tr>
+			<td class="auto-style1">到____需要多久？</td>
+		</tr>
+	</table>
+	</div>
+		
+
+
+
+	<div class="innercontent">
+	<table align="right" style="width: 100%">
+		<tr>
+			<td class="auto-style2">
+			<span lang="EN-US">
+			<a id="4" class="anchor"></a>
+			<input type="button" onclick="chg4()" style="background-image:url(img/speaker.png);width:20px;height:16px;">Excuse me, I’ve lost my way.</span></td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Taiwanese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">pháinn-sè, wo kiânn-bô-lōo a.</td>
+		</tr>
+		<tr>
+			<td class="auto-style3">Chinese</td> <!--不用改-->
+		</tr>
+		<tr>
+			<td class="auto-style1">bù hǎo yì sī ，wǒ mí lù le</td>
+		</tr>
+		<tr>
+			<td class="auto-style1">不好意思，我迷路了。</td>
+		</tr>
+	</table>
+	</div>
+	
+	
+	
+	
+
+</div>
+
+
+
+
+	
+	
+	
+	
+
+</body>
+</html>

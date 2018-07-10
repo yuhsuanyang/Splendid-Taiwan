@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/east/hsiuguluan3.jpg","./img/east/hsiuguluan1.jpg","./img/east/hsiuguluan2.jpg"]
+    var small=["small0","small1","small2"]
+    var words=["Hsuiguluan River","Rafting at Hsuiguluan River","Changhong Bridge is the end of rafting"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Hsuiguluan River</font></p>
+    <p align="center">Hualien County</p>
+   <img  src="./img/east/hsiuguluan3.jpg" width="800" id="demo">
+   <p id="desc">Hsuiguluan River</p>
+   <img src="./img/east/hsiuguluan3.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/east/hsiuguluan1.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/east/hsiuguluan2.jpg" width="130" onclick="change(2)" id="small2">
+   <p><font size="8">T</font><font size="3">he Hsuiguluan River originate from the Central Moutain Range and flows into the Pacific Ocean.<br>
+    It is the largest river in eastern Taiwan. The river has become a prime destination for rafting. Most of the routes for<br>
+	rafting begin at the Rueisuei Bridge and end at the Changhong Bridge.There are many riptides, rapids and swirls <br>
+    along the way, making rafting challenging and exciting here. </font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation: <br>
+           The nearest train station from this region is the Rueisuei station. 
+    </ul>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234498.1018266369!2d121.20251432226478!3d23.314567206221756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f6a6d5f66b3cd%3A0xadc5174cf9ed1c5b!2z56eA5aeR5beS5rqq!5e0!3m2!1szh-TW!2stw!4v1529295659297" 
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

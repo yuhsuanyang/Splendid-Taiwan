@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/central/lukang1.jpg","./img/central/lukang2.jpg","./img/central/lukang3.jpg","./img/central/lukang4.jpg","./img/central/lukang5.jpg"]
+    var small=["small0","small1","small2","small3","small4"]
+    var words=["Lukang Township","Lukang Township","Lukang Township","Lukang Township","Lukang Township"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Lukang Township</font></p>
+    <p align="center">Changhua County</p>
+   <img src="./img/central/lukang1.jpg" width="800" id="demo">
+   <p id="desc">Sun Moon Lake National Scenic Area</p>
+   <img src="./img/central/lukang1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/central/lukang2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/central/lukang3.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/central/lukang4.jpg" width="130" onclick="change(3)" id="small3">
+   <img src="./img/central/lukang5.jpg" width="130" onclick="change(4)" id="small4">
+   <p><font size="8">C</font><font size="3">hijin used to be a sand bar which is connected with the southern tip of Kaohsiung, but in 1967,this link was severed to <br>
+    create a second entry point to the Port of Kaohsiung. Being an island, Chijin is not only known for beaches and seafoods <br>
+    but also with abundant history. Chinjin Mazu Temple is the first Mazu Temple in Kaohsiung, which indicates the belif in<br>
+    Mazu in this area. The Rainbow Chruch, built in recent years, becomes a new tourist spot in Chijin, especially for those <br>
+    who come for shooting wedding pictures.<br></font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:<br>
+          The "Cross Harbor Tunnel" (Chinese: 過港隧道) connects Cijin Island and the rest of Kaohsiung on mainland Taiwan.<br>
+          Cijin District is also accessible by two ferry piers, the Cijin Ferry Pier at the northern tip of the island and<br>
+          the Zhongzhou Ferry Pier at the middle of the island.</li>
+    </ul>
+        
+    
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116560.34301485849!2d120.35856236486407!3d24.083528827806614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346945d13e2357bd%3A0x1fb8750b6d439cd8!2sLukang+Township%2C+Changhua+County%2C+505!5e0!3m2!1sen!2stw!4v1530332918541" width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

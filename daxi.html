@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+        var photo=["./img/north/daxi1.jpg","./img/north/daxi2.jpg","./img/north/daxi3.jpg","./img/north/daxi4.jpg","./img/north/daxi5.jpg"]
+        var small=["small0","small1","small2","small3","small4"]
+        var words=["Daxi Old Street","Daxi Old Street","Daxi Bridge","Guesthouses of Chiang Kai-shek","Statue of Chiang Kai-shek"]
+        function change(x){
+            document.getElementById("demo").src=photo[x];
+            for(i = 0; i < small.length; i++){
+                document.getElementById("desc").innerHTML=words[x];
+                if(i==x){
+                    document.getElementById(small[i]).style.opacity=0.5;
+                }else{
+                    document.getElementById(small[i]).style.opacity=1;
+                }
+            }
+            
+    
+        }
+    </script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+
+<div class="content">
+        <p align="center"><font size="6">Daxi</font></p>
+        <p align="center">Taoyuan City</p>
+       <img src="./img/north/daxi1.jpg" width="800" id="demo">
+       <p id="desc"> Daxi Old Street</p>
+       <img src="./img/north/daxi1.jpg" width="130" onclick="change(0)" id="small0">
+       <img src="./img/north/daxi2.jpg" width="130" onclick="change(1)" id="small1" >
+       <img src="./img/north/daxi3.jpg" width="130" onclick="change(2)" id="small2" >
+       <img src="./img/north/daxi4.jpg" width="130" onclick="change(3)" id="small3" >
+       <img src="./img/north/daxi5.jpg" width="130" onclick="change(4)" id="small4" >
+       <p><font size="8">D</font><font size="3">asi District, formerly known as DaXi Township, is a district in eastern Taoyuan City and is named after the Dahan<br>
+        River which flows through the area. In March 2012, it was named one of the Top 10 Small Tourist Towns by  <br> 
+        the Tourism Bureau of Taiwan. The Daxi Bridge is across the Dahan River and features the Baroque-style archway.<br>
+        The Daxi Old Street is a historical spot in this area. The street used to be the bustling hub for camphor and<br>
+        tea trades which was built during the Japanese rule of Taiwan. It consists of old stores along Heping Road,<br>
+        Zhongshan Road and Zhongyang Road and is mainly centered on Heping Old Street nowadays. It is also filled with<br>
+        diverse stores with the facade designed in Baroque style that is a perfect blend of East and West. Next to the<br>
+        Daxi Old Street is the Guesthouses of Chiang Kai-shek. It is the residence of the former president-- Chiang Kai-shek.<br>
+        Visitors can see the living rooms, bedrooms and studies inside and image the livestyle of the former president.</font></p>
+        <ul>
+            <li>Best seasons: all year around</li>
+            <li>Transportation:<br>
+                Bus station in Daxi is Daxi Bus Station of Taoyuan Bus. Daxi is served by National Highway No. 3 and <br>
+                Provincial Highway No. 66.<br>
+    
+            </li>
+        </ul>
+        
+    </div>
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.366262469176!2d121.28727526304922!3d24.885485430856626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468182238ecc34d%3A0x9eb6fcc6b7650372!2sDaxi+Old+Street!5e0!3m2!1sen!2stw!4v1530277889607"
+         width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script type='text/javascript'>
+			imgSrc=new Array()
+			imgSrc[0]="img/01.jpg"
+			imgSrc[1]="img/02.jpg"
+			imgSrc[2]="img/03.jpg"
+			imgSrc[3]="img/04.jpg"
+			imgSrc[4]="img/05.jpg"
+			imgSrc[5]="img/06.jpg"
+			imgSrc[6]="img/07.jpg"
+			imgSrc[7]="img/08.jpg"
+			imgSrc[8]="img/09.jpg"
+			imgSrc[9]="img/10.jpg"
+
+			bannerNum=1 
+			index = imgSrc.length-1 //最高index
+			rightNum = 0
+			
+			timer=setInterval(turnRight, 3000);
+ 
+			function Ini(){
+			z=0 
+
+			Message=""
+
+			bannerAreaMsg=""
+			  for (x=0;x<bannerNum;x++){
+				bannerAreaMsg += "<img src='"+imgSrc[x] +
+								 "' border=0 width=100% height=100%></a>　"
+			  }
+			bannerArea.innerHTML = bannerAreaMsg
+			}
+
+			function turnRight(){
+			rightNumTemp=0
+			bannerAreaMsg=""
+			rightNum++
+			 if(rightNum>index) { 
+			   rightNum = 0 
+			 }
+			rightNumTemp=rightNum
+			  for (x=0;x<bannerNum;x++){
+				if(rightNumTemp>index) { 
+				  rightNumTemp = 0 
+				}
+				bannerAreaMsg += "<img src='"+imgSrc[rightNumTemp] +
+								 "' border=0 width=100% height=100%></a>　"
+				rightNumTemp++
+			  }
+			bannerArea.innerHTML = bannerAreaMsg
+			}
+			
+			
+
+			 function stopautophoto(){
+				clearInterval(timer) 
+			  }	
+		  
+			
+	</script>
+
+</head>
+
+<body onLoad="Ini();iniSelect();startTimer();stopautophoto()">
+	<div align="left">
+		<div id="bannerArea" align="center"></div>
+	</div>
+</body>
+</html>

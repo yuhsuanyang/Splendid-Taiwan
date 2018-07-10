@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/elephantmt1.jpg","./img/north/elephantmt2.jpg","./img/north/elephantmt3.jpg","./img/north/elephantmt4.jpg"]
+    var small=["small0","small1","small2","small3"]
+    var words=["Cityscape of Taipei can be viewed from Xiangshan","Cityscape of Taipei can be viewed from Xiangshan","Xiangshan Hiking Trail",
+    "Xiangshan is a good place for watching fireworks at New Year's Eve "]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Xiangshan</font></p>
+    <p align="center">Taipei City</p>
+   <img src="./img/north/elephantmt1.jpg" width="800" id="demo">
+   <p id="desc">Cityscape of Taipei can be viewed from Xiangshan</p>
+   <img src="./img/north/elephantmt1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/elephantmt2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/elephantmt3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/elephantmt4.jpg" width="130" onclick="change(3)" id="small3" >
+   <p><font size="8">x</font><font size="3">iangshan, also known as the elephant mountain, is a mountain in Xingyi District. It is named because its elephant-like <br> 
+    shape. Although the altitude is not high, Xiangshan is a major tourist attraction for Taipei citizens because it locates <br>
+    near the center of Taipei City. It is a good place for viewing the whole cityscape of Taipei City, especially at night, when<br>
+    the buildings lit up. During the New Year's Eve, Xiangshan is filled with people to see the fireworks displayed at Taipei 101.<br>
+    Besides, the 1.5km-long Xiangshan Hiking Trail makes it popular for hiking.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:
+            MRT Xiangshan Station.<br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14460.805197502976!2d121.56774412888439!3d25.027241786638832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abac5b58b165%3A0x6db89036490f6520!2z6LGh5bGx!5e0!3m2!1sen!2stw!4v1530329373155" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

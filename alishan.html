@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+	div.content{
+        position: absolute;
+        top:15%; 
+        left: 5%;
+		width: 63.5%
+		
+		
+    }
+</style>
+<script>
+    var photo=["./img/south/alimt1.jpg","./img/south/alimt2.jpg","./img/south/alimt3.jpg","./img/south/alimt4.JPG","./img/south/alimt5.jpg","./img/south/alimt6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Sunrise and the sea of clouds","Alishan Forest Railway","Giant Tree Plank Trail","Cedar Wooden Plank Trail","Fenqihu","Tsou people"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<br><br>
+<div class="content">
+    <p align="center"><font size="6">Alishan</font></p>
+    <p align="center">Chiayi County</p>
+   <img src="./img/south/alimt1.jpg" width="800" id="demo"></img>
+   <p id="desc">Sunrise and the sea of clouds</p>
+   <img src="./img/south/alimt1.jpg" width="130" onclick="change(0)" id="small0"></img>
+   <img src="./img/south/alimt2.jpg" width="130" onclick="change(1)" id="small1" ></img>
+   <img src="./img/south/alimt3.jpg" width="130" onclick="change(2)" id="small2" ></img>
+   <img src="./img/south/alimt4.JPG" width="130" onclick="change(3)" id="small3" ></img>
+   <img src="./img/south/alimt5.jpg" width="130" onclick="change(4)" id="small4" ></img>
+   <img src="./img/south/alimt6.jpg" width="130" onclick="change(5)" id="small5" ></img>
+   <p><font size="8">T</font><font size="3">he Alishan area was originally settled by the Tsou tribe of the Taiwanese aborigines and was planned to be<br> 
+    the Alishan National Scenic Area in 2001. During the Japanese rule period, the Japanese goverment constructed the<br>
+    Alishan Forest Railway from Chiayi City for the convenience of logging the Taiwan Cypress from Alishan.  <br>
+    Nowadays, the railway has become a tourist attraction with its unique Z-shaped switchbacks,  over 50 tunnels<br>
+    and 77 wooden bridges. Alishan is famous for its dazzling sunrise, sea of clouds and the sacred trees. For those who like<br>
+    hiking and experience the beauty of forests will be interested in Giant Tree Plank Trail. The trial was built in 1998, when<br>
+    Alishan’s sacred tree fell down naturally and ended its legendary life of more than 3000 years. Fenquhu is a small village<br>
+    which is route stop of the Alishan Forest Railway. Tourists bounded for Alishan usually drop by for a rest and appreciate<br>
+    the adorable village.</font></p>
+    <ul>
+        <li>Official Website: <a href="https://www.ali-nsa.net/user/main.aspx">https://www.ali-nsa.net/user/main.aspx</a></li>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:<br>
+            Public bus service connect Chiayi Train Station to the area is available from the Taiwan Tourist Bus.<br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234256.5548609551!2d120.67892814681431!3d23.451132233409908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ee75449af122b%3A0x91d9e9efcca8b4ec!2sAlishan+Township%2C+Chiayi+County%2C+605!5e0!3m2!1sen!2stw!4v1529074070510" 
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

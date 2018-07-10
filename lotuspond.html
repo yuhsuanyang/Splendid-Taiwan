@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/lotuspond1.jpg","./img/south/lotuspond2.jpg"]
+    var small=["small0","small1"]
+    var words=["Spring and Autumn Pavilions & Dragon and Tiger Pagodas","Confucius Temple"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Lotus Pond</font></p>
+    <p align="center">Kaohsiung City</p>
+   <img src="./img/south/lotuspond1.jpg" width="800" id="demo">
+   <p id="desc">Spring and Autumn Pavilions & Dragon and Tiger Pagodas</p>
+   <img src="./img/south/lotuspond1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/lotuspond2.jpg" width="130" onclick="change(1)" id="small1" >
+   <p><font size="8">L</font><font size="3">otus Pond is a artificial lake and popular tourist destination on the east side of Zuoying District in Kaohsiung City.<br>
+    It is famous for the lotus plants on the lake and the numerous temples around the lake. Spring and Autumn Pavilions,<br>
+    Dragon and Tiger Pagodas are the feature of the Lotus Pond. The history of the Confucius Temple can be traced back to<br>
+    the Qing Dynasty in 17th century. Although the architecture being presented today is the one rebuilt in 1977, it remains<br>
+    the pattern of Confucian temple in ancient China and it is the largest measure in Taiwan.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation: 
+            Public bus service to the area is available from #301, R35, R51A, R51B, R51C metro shuttle bus.</li>
+    </ul>
+        
+    
+</div>
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14724.772689822672!2d120.28738895954888!3d22.68385173945241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e059e2f57f019%3A0x627969fe1eec1f2c!2sLotus+Pond!5e0!3m2!1sen!2stw!4v1529006092500" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

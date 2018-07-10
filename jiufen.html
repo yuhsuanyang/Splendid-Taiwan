@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/jiufen1.jpg","./img/north/jiufen2.jpg","./img/north/jiufen3.jpg","./img/north/jiufen4.jpg"]
+    var small=["small0","small1","small2","small3"]
+    var words=["Jiufen","Jiufen Old Street","Gold Ecological Park ","Taiwanese taro balls"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Jiufen</font></p>
+    <p align="center">New Taipei City</p>
+   <img src="./img/north/jiufen1.jpg" width="800" id="demo">
+   <p id="desc">Jiufen</p>
+   <img src="./img/north/jiufen1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/jiufen2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/jiufen3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/jiufen4.jpg" width="130" onclick="change(3)" id="small3" >
+   <p><font size="8">J</font><font size="3">is a mountain area in Ruifang District. It was know for the production of gold, and the history of gold rush can be <br> 
+    traced back to the Qing Dynasty. Mining industry in Jiufen reached its peak during the Japanese rule period, and went down <br>
+    in history in 1971. The Gold Ecological Park is a museum of the mining industry here. It provides information about <br>
+    the discovery of gold in the area, with displays on the Benshan Tunnels, old mining equipment, mining transport systems. <br>
+    Jiufen Old Street goes through most of the village and is surrounded by many steps. Red laterns in front of shops will be<br>
+    lit up in the evening, which forms a nostalgic scenery. You can also overlook at the mountain city and the fishing lights,<br>
+    because it is nearby  the coastline of the northern Taiwan. Jiufen is also famous for the Taiwanese taro balls.<br>
+    It is a popular local snack made of taro and sweet potatoes.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:<br>
+            The nearest train station is Rueifang Station of the Taiwan Railways Administration Yilan Line,<br>
+             which is 15 minutes away by bus.
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7225.595579572285!2d121.84118612467259!3d25.108705450779848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d451805536779%3A0x29b83a838c953b84!2sJioufen%2C+Ruifang+District%2C+New+Taipei+City%2C+224!5e0!3m2!1sen!2stw!4v1530330357875" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

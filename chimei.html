@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/chimei1.jpg","./img/south/chimei2.jpg","./img/south/chimei3.jpg"]
+    var small=["small0","small1","small2"]
+    var words=["Muse Plaza & Olympus Bridge","Gorgeous night scenery around Chimei Museum","Tainan Metropolitan Park"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Chimei Museum</font></p>
+    <p align="center">Tainan City</p>
+   <img src="./img/south/chimei1.jpg" width="800" id="demo">
+   <p id="desc">Muse Plaza & Olympus Bridge</p>
+   <img src="./img/south/chimei1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/chimei2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/south/chimei3.jpg" width="130" onclick="change(2)" id="small2" >
+   <p><font size="8">T</font><font size="3">he Chimei Museum is the museum with the most abundant collections in Taiwan. It is a private museum established <br>
+    in 1992 by the Chi Mei Corporation. The museum is known for having one of the largest collections of violins <br>
+    in the world. The Greek architecture, themed with Greek mythology, is also a feature of the museum which attracts <br>  
+    lots of people to come and take photos. Even in the nights, when the museum is closed, the elegant structure outlined <br>
+    by the lights, making it a romantic scenery. Next to the museum sits the Tainan Metropolitan Park, which is also a good place<br>
+    for a short walk in the afternoon.</font></p>
+    <ul>
+        <li>Official Website: <a href="https://www.chimeimuseum.org/ml/English/3">https://www.chimeimuseum.org/ml/English/3</a></li>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:<br>
+            The nearest train station is the Boa'an station.
+            Public bus service to the area is available from R3,R4 shuttle bus.</li>
+    </ul>
+    
+</div>
+	
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.418241883491!2d120.2249941484254!3d22.934819096614838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e747aaaaaaaab%3A0xa88c13e665c7f4a6!2sChimei+Museum!5e0!3m2!1sen!2stw!4v1529071292062" 
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

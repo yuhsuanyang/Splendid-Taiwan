@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/central/sanyi1.jpg","./img/central/sanyi2.jpg","./img/central/sanyi3.jpg","./img/central/sanyi4.JPG","./img/central/sanyi5.jpg","./img/central/sanyi6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Longteng Bridge","Shiliyun Camping Area","Mt.Foding Pilgrimage Temple","Liyutan Reservoir","Tung Blossoms","Charcoal Road"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Sanyi</font></p>
+    <p align="center">Miaoli County</p>
+   <img src="./img/central/sanyi1.jpg"width="800" id="demo">
+   <p id="desc">Longteng Bridge</p>
+   <img src="./img/central/sanyi1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/central/sanyi2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/central/sanyi3.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/central/sanyi4.JPG" width="130" onclick="change(3)" id="small3">
+   <img src="./img/central/sanyi5.jpg" width="130" onclick="change(4)" id="small4">
+   <img src="./img/central/sanyi6.jpg" width="130" onclick="change(5)" id="small5">
+   <p><font size="8">S</font><font size="3">anyi Township is a rural township in southern Miaoli County, Taiwan.<br>
+   It is famous for its mudiao (woodcarving) industry earning it the name the Woodcarving Kingdom of Taiwan.<br>
+	Longteng bridge is a famous spot in Sanyi, it was built in 1906 during Japanese rule, and was named Gyotōhei kyō.<br>
+	In April and May forests around the country turn white thanks to the Tung Blossoms that line mountains and hillsides.<br> 
+	People here in Taiwan often refer to the blossoms as "April Snow" or "May Snow"  </font></p>
+    <ul>
+        <li>Best seasons: summer</li>
+        <li>Transportation: TRA Miaoli station → Hsinchu Bus (bond for Sanyi) to Sanyi stop.
+           
+    </ul>
+    
+</div>
+<div class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116289.78596378253!2d120.70360949051934!3d24.379361804753923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34690438e99a01a5%3A0x7a607fbf38bc03cf!2zMzY36IuX5qCX57ij5LiJ576p6YSJ!5e0!3m2!1szh-TW!2stw!4v1529071520485" width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+</div>
+      
+
+</body>
+</html>

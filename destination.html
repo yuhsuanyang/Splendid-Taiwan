@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+  div.map{
+    position:absolute;
+    top:20%;
+    left:10%
+  }
+  map :focus{
+    outline:none;
+  }
+  #north_west_counties{
+    position:absolute;
+    top:15%;
+    left:6%;
+    color: hotpink;
+  }
+  #north_east_counties{
+    position:absolute;
+    top:30%;
+    left:27%;
+    color: hotpink;
+  }
+  #central_counties{
+    position:absolute;
+    top:35%;
+    color:plum;
+  }
+  #south_counties{
+    position:absolute;
+    top:60%;
+    color:yellowgreen;
+  }
+  #east_counties{
+    position:absolute;
+    top:50%;
+    left:25%;
+    color:skyblue;
+  }
+  .btn {
+    background-color:black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+div.search{
+    top:20%;
+    left:50%;
+    position: absolute;
+    
+}
+.search1 {
+    top:50%;
+    position: relative;
+    display: inline-block;
+}
+
+.search1-content {
+    display: none;
+    position: absolute;
+    top:0%;
+    left:100%;
+    background-color:#f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.search1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.search1-content a:hover {background-color: #f1f1f1}
+
+.search1:hover .search1-content {
+    display: block;
+}
+
+.search1:hover .btn {
+    background-color: black;
+}
+  
+</style>
+
+
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="map">
+  <img src="./img/taiwanmap.png" usemap="#map" height="450">
+  <map name="map">
+    <area shape="polygon" coords="120,86,180,125,230,125,250,40,200,5,140,50" alt="north" href="north.html" >
+    <area shape="polygon" coords="125,86,180,135,150,240,25,235" alt="central" href="central.html" >
+    <area shape="polygon" coords="40,240,80,230,130,250,120,440,100,440,20,280" alt="south" href="south.html" >
+    <area shape="polygon" coords="185,130,230,130,180,300,120,400,110,400,110,350" alt="east" href="east.html" >
+</div>
+<span id="north_west_counties">
+  <ul style="list-style-type:none">
+    <li>Taipei City</li>
+    <li>New Taipei City</li>
+    <li>Taoyuan City</li>
+    <li>Hsinchu City</li>
+    <li>Hsinchu County</li>
+  </ul>
+</span>
+<span id="north_east_counties">
+    <ul style="list-style-type:none">
+      <li>Keelung City</li>
+      <li>Yilan County</li>
+    </ul>
+  </span>
+<span id="central_counties">
+    <ul style="list-style-type:none">
+        <li>Miaoli County</li>
+        <li>Taichung City</li>
+        <li>Nantou County</li>
+        <li>Changhua County</li>
+        <li>Yunlin County</li>
+      </ul>
+</span>
+<span id="south_counties">
+    <ul style="list-style-type:none">
+        <li>Chiayi County</li>
+        <li>Chiayi City</li>
+        <li>Tainan City</li>
+        <li>Kaohsiung City</li>
+        <li>Pingtung City</li>
+      </ul>
+</span>
+<span id="east_counties">
+    <ul style="list-style-type:none">
+        <li>Hualien County</li>
+        <li>Tiatung County</li>
+      </ul>
+</span>
+<div class="search">
+    <span class="search1">
+        <button class="btn">Search by Season</button>
+        <span class="search1-content">
+            <a href="spring.html" >Spring</a>
+            <a href="summer.html" >Summer</a>
+            <a href="fall.html" >Autumn</a>
+            <a href="winter.html" >Winter</a>
+         </span>
+
+    </span>
+    <br><br><br><br><br><br><br><br>
+    <span class="search1">
+       <button class="btn">Search by Category</button>
+       <span class="search1-content">
+          <a href="natural.html" >Natural Landscapes</a>
+          <a href="architecture.html" >Architecture</a>
+          <a href="historical.html" >Historical Sites</a>
+          <a href="nights.html">Nights</a>
+       </span>
+    </span>
+    <br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+</body>
+</html>

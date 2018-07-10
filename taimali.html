@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/east/taimali1.jpg","./img/east/taimali2.jpg","./img/east/taimali3.jpg","./img/east/taimali4.jpg","./img/east/taimali5.jpg","./img/east/taimali6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Taimali Jean-Zen mountain is at the Dawang village","Duoliang Station","Kimlun Hot Springs Scenic Areas","Wild hot spring in Kimlun","Amis people","Piwan people"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Taimali</font></p>
+    <p align="center">Taitung County</p>
+   <img src="./img/east/taimali1.jpg" width="800" id="demo">
+   <p id="desc">Taimali Jean-Zen mountain is at the Dawang village</p>
+   <img src="./img/east/taimali1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/east/taimali2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/east/taimali3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/east/taimali4.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/east/taimali5.jpg" width="130" onclick="change(4)" id="small4" >
+   <img src="./img/east/taimali6.jpg" width="130" onclick="change(5)" id="small5" >
+   <p><font size="8">T</font><font size="3">aimali Township is a rural township in Taitung County. One-thrid of the population here are the Amis and Paiwan <br> 
+    peoples. Taimali consists of nine villages. The Taimali Jean-Zen mountain, located at the Dawang village, is the <br>
+    best-know scenery in this area. From August to Octorber, when the Jean-Zen flower blooms, you can enjoy the golden hill,<br>
+    covered by the flowers. The Duoliang Station, which sits beside the Pacific Ocean, is also a must-see tourist spot.<br>
+    Although the Duoliang Station does not provide passenger traffic anymore, the station attracts lots of tourists for<br>
+    visiting-- standing on the platform, and you can overlook the Pacific Ocean. The Kimlun Hot Springs Scenic Areas features<br>
+    wild hot springs in Taitung. The Kimlun hot spring is a slightly alkaline sodium bicarbonated spring with the spring water <br>
+    of 70 to 90 degree Celsuis. Dig through the Kimlun River, and the hot spring squirts out. </font></p>
+    <ul>
+        <li>Best seasons: Summer and autumn</li>
+        <li>Transportation:
+            The nearest train station from this region is the Jinlun Station, Longxi Station, and the Taimali Station,<br>
+            which belong to the TRA - South-Link Line.
+
+        </li>
+    </ul>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85142.8626333758!2d120.90811168098591!3d22.646725519540457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fcc0f580463fd%3A0xe45710bbc5e73b10!2z5aSq6bq76YeM6YeR6Yed5bGx!5e0!3m2!1szh-TW!2stw!4v1529340296907" 
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

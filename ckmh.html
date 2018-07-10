@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/ckmh1.jpg","./img/north/ckmh2.jfif","./img/north/ckmh3.jpg"]
+    var small=["small0","small1","small2"]
+    var words=["Liberty Square Center","Chiang Kai-shek Memorial Hall","The ceiling of the hall is with caisson"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Chiang Kai-shek Memorial Hall</font></p>
+    <p align="center">Taipei City</p>
+   <img src="./img/north/ckmh1.jpg" width="800" id="demo">
+   <p id="desc">Liberty Square Center</p>
+   <img src="./img/north/ckmh1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/ckmh2.jfif" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/ckmh3.jpg" width="130" onclick="change(2)" id="small2" >
+   <p><font size="8">T</font><font size="3">he National Chiang Kai-shek Memorial Hall s a national monument, landmark and tourist attraction erected <br>
+    in memory of Chiang Kai-shek former President of the Republic of China. It is located in Zhongzheng District.<br>
+    The architecture uses white marble as material and is inspired by Tiantan in Beijing. The roof is blue and octagonal,<br>
+    a shape that picks up the symbolism of the number eight, a number traditionally associated in Asia with abundance and <br>
+    good fortune. At the west end stands the Liberty Square Center. It has served as the public gathering place since<br>
+    its completion in the late 1970s. The name of the square recalls the important historical role of transition from  one-party rule<br>
+    to modern democracy in the 1990s. The ceiling of the hall is a caisson with the national emblem of Taiwan in the center.<br> 
+    The Caisson is a East Asian-style structure typically found in the ceiling of temples and palaces with shapes of include<br>
+    square, octagon, hexagon, circle, and a combination of these.
+    </font></p>
+    <ul>
+        <li>Official website: <a href="https://www.cksmh.gov.tw/eng/index.php">https://www.cksmh.gov.tw/eng/index.php</a></li>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:
+                MRT Chiang Kai-Shek Memorial Hall Station, Exit 3、5&6.<br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9840089008344!2d121.51959231488897!3d25.03461674442095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99db9a2a94d%3A0x43e9034292df69b2!2sNational+Chiang+Kai-shek+Memorial+Hall!5e0!3m2!1sen!2stw!4v1530328743942" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

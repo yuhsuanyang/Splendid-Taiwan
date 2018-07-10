@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/yehliu1.jpg","./img/north/yehliu2.jpg","./img/north/yehliu3.jpg","./img/north/yehliu4.jpg"]
+    var small=["small0","small1","small2","small3"]
+    var words=["Queen's head","Sea Candles","Fairy's Shoe ","Wave-cut Platforms"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Yehliu Geopark</font></p>
+    <p align="center">New Taipei City</p>
+   <img src="./img/north/yehliu1.jpg" width="800" id="demo">
+   <p id="desc">Queen's head</p>
+   <img src="./img/north/yehliu1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/yehliu2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/yehliu3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/yehliu4.jpg" width="130" onclick="change(3)" id="small3" >
+   <p><font size="8">Y</font><font size="3">ehliu is a cape of about 1,700 meters long formed by Datun Mountain reaching into the sea. A distinctive feature of Yehliu <br> 
+    is the hoodoo stones that dot its surface. These shapes can be viewed at the Yehliu Geopark. A number of rock formations<br>
+    have been given imaginative names based on their shapes. The best known is the "Queen's Head", an iconic image in Taiwan <br>
+    and an unofficial emblem for the town of Wanli. Other formations include the "Fairy Shoe", and the "Sea Candles" are also<br>
+    interesting geological landscape. There are also many wave-cut platforms due to the waves dashing against the sea cliffs. </font></p>
+    <ul>
+        <li>Official Website:<a href="http://www.ylgeopark.org.tw/ENG/info/YlIntroduction_en.aspx">http://www.ylgeopark.org.tw/ENG/info/YlIntroduction_en.aspx</a></li>
+        <li>Best seasons: summer</li>
+        <li>Transportation:
+            Take the express bus bounding to Jinshan at Tamshui station (near Tamshui MRT Station) and alight at Yehliu stop. <br>
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24818.200267895423!2d121.67011025868938!3d25.1966574201945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4b8a46b336b7%3A0xf52664cb75e183ea!2sYeliou%2C+New+Taipei+City!5e0!3m2!1sen!2stw!4v1530330055907" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/anping1.jpg","./img/south/anping2.jpg","./img/south/anping3.jpg","./img/south/anping4.JPG","./img/south/anping5.jpg","./img/south/anping6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Fort Zeelandia","Eternal Golden Castle","Anping Tree House (inside)","Anping Tree House (outside)","Anping bean jelly","Anping shrimp roll"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div>
+    <div class="content">
+    <p align="center"><font size="6">Anping</font></p>
+    <p align="center">Tainan City</p>
+   <img src="./img/south/anping1.jpg"width="800" id="demo">
+   <p id="desc">Fort Zeelandia</p>
+   <img src="./img/south/anping1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/anping2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/south/anping3.jpg" width="130" onclick="change(2)" id="small2">
+   <img src="./img/south/anping4.JPG" width="130" onclick="change(3)" id="small3">
+   <img src="./img/south/anping5.jpg" width="130" onclick="change(4)" id="small4">
+   <img src="./img/south/anping6.jpg" width="130" onclick="change(5)" id="small5">
+   <p><font size="8">A</font><font size="3">ping District can be view as the most historic area in Taiwan. The history of Anping dates back to the 17th century, <br>
+    when the Dutch East India Company occupied a "high sandy down" called Tayouan and built Fort Zeelandia.<br>
+	In the Qing Dynasty, the Eternal Golden Castle, served as a fort, was built to defend the island against Japanese invasions.<br>
+	Nowadays, both the Fort Zeelandia and the Eternal Golden Castle are declared to be the National monuments.<br>
+    Around this area are other special monuments such as Former Tait & Co. Merchant House and the Anping Tree House. <br>
+    The Anping Old Street is also worth visiting. You can find a lot of delicious snacks such as the bean jelly<br>
+	and the shrimp roll.</font></p>
+    <ul>
+        <li>Best seasons: all year around</li>
+        <li>Transportation: Public bus service to the area is available from #2, #6, #10, #14.
+           
+    </ul>
+    
+</div>
+</div>
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29383.56207825466!2d120.15873216569365!3d22.98904033571065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75febe15dacf%3A0x25f3085df3cc206!2sAnping+District%2C+Tainan+City%2C+708!5e0!3m2!1sen!2stw!4v1529040030543"
+         width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

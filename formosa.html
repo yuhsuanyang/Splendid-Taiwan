@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/south/formosa1.jpg","./img/south/formosa2.jpg","./img/south/formosa3.jpg"]
+    var small=["small0","small1","small2"]
+    var words=["Dome of Light","Heart of the MRT, the prayer (inside the station)","Heart of the MRT, the prayer (outside the station)"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Formosa Boulevard Station</font></p>
+    <p align="center">Kaohsiung City</p>
+   <img src="./img/south/formosa1.jpg" width="800" id="demo">
+   <p id="desc">Dome of Light</p>
+   <img src="./img/south/formosa1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/south/formosa2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/south/formosa3.jpg" width="130" onclick="change(2)" id="small2">
+   <p><font size="8">T</font><font size="3">he Kaohsiung MRT Formosa Boulevard station is the only transfer station between the Red Line and the Orange Line. <br>
+    The station is named after the Formasa Incident for memories and is respected as one of the most beautiful station <br>
+    in the world. "Dome of Light", being its biggest feature, is the largest glass work in the world-- 30 metres in diameter<br>
+    and is made up of 4,500 glass panels. At the entrance of the station isanother public art named <br>
+    "Heart of the MRT, the prayer", which serves as a landmark of Kaohsiung City.</font></p>
+    <ul>
+        <li>Best seasons: All year around</li>
+        <li>Transportation: Take the Kaohsiung MRT to the transtion station.</li>
+    </ul>
+        
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14730.349552983662!2d120.29471830444643!3d22.63187820730908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04893c9a0bfd%3A0xbcf1d5c7ee300e86!2sFormosa+Boulevard+Station!5e0!3m2!1sen!2stw!4v1528987819397" 
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

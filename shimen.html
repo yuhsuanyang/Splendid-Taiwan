@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/shiman1.jpg","./img/north/shiman2.jpg","./img/north/shiman3.jpg","./img/north/shiman4.jpg","./img/north/shiman5.jpg"]
+    var small=["small0","small1","small2","small3","small4"]
+    var words=["Shimen Reservior","Boat trip in Shimen Reservior","Chinese Fringetree will bloom at the end of March","Cherry Blossom will bloom at early spring",
+    "Reservoir discharge during rainy season"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Shimen Reservior</font></p>
+    <p align="center">Taoyuan City</p>
+   <img src="./img/north/shiman1.jpg" width="800" id="demo">
+   <p id="desc">Shimen Reservior</p>
+   <img src="./img/north/shiman1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/shiman2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/shiman3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/shiman4.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/north/shiman5.jpg" width="130" onclick="change(4)" id="small4" >
+   <p><font size="8">T</font><font size="3">he Shisen Reservior is one of the major reservior in northern Taiwan. It was once the biggest dam in the Far East. <br> 
+        Nowadays, it was not only served as a water facility, but also becomes a tourist attraction because of the beautiful<br>
+    moutains and lakes there. Shihmen Reservoir is also a good place for flowers. When approaching spring, cherry blossoms,<br>
+    azaleas and Chinese Fringetree bloom all along the lakeside. There are bike trails and boat trip, which offers diverse leisure.<br>
+    During the rainy season,when the reservior discharge, the scene is so spectacular that attracts many tourists. </font></p>
+    <ul>
+        <li>Best seasons: Spring and summer</li>
+        <li>Transportation:
+            Take the train to Zhongli Railway Station, continue by Taoyuan Bus (bound for Shimen Reservoir) <br>
+            to Shimen stop.
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.508154337593!2d121.24359741488533!3d24.81229005329751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683de5d9462b8b%3A0xe36ce9eba2f09ec4!2zU2hpaG1lbiBEYW0sIOahgzYz6YSJ6YGTIERheGkgRGlzdHJpY3QsIFRhb3l1YW4gQ2l0eSwgMzM1!5e0!3m2!1sen!2stw!4v1530277522269" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

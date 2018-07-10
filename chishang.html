@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/east/chishang1.jpg","./img/east/chishang2.jpg","./img/east/chishang3.jpg","./img/east/chishang4.jpg","./img/east/chishang6.jpg","./img/east/chishang5.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Chishang Township","Mr. Brown Avenue","Takeshi Kaneshiro tree","Dapo Pond","Bamboo rafts in Dapo Pond","Chishang lunch box is made of Chishang rice"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Chishang</font></p>
+    <p align="center">Taitung County</p>
+   <img src="./img/east/chishang1.jpg" width="800" id="demo">
+   <p id="desc">Chishang Township</p>
+   <img src="./img/east/chishang1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/east/chishang2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/east/chishang3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/east/chishang4.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/east/chishang6.jpg" width="130" onclick="change(4)" id="small4" >
+   <img src="./img/east/chishang5.jpg" width="130" onclick="change(5)" id="small5" >
+   <p><font size="8">C</font><font size="3">hishang is a rural township in Taitung County. Located at the Huadong Valley, which is with abundant rainfall<br> 
+    and clear sources of water, Chishang is famous for growing the Chishang rice, which is considered to be the best rice<br>
+    in Taiwan. When harvest at autumn, the fields here will turn golden. The Chishang lunch box is also a  must-eat gourmet <br>
+    for tourists. The Mr. Brown Avenue is known for being the scene of the advertisement of the Mr. Brown coffee,<br>
+    and the Takeshi Kaneshiro tree is especially a popular spot there. The Takeshi Kaneshiro tree is a Bishop wood <br>
+    which named after the movie star Takeshi Kaneshiro. This tree has become  Taiwan's best known one since <br>
+    the summer of 2013 after Takeshi Kaneshiro sipped tea in its shade in an EVA Airways TV commercial. <br>
+    The Dapo Pond is an inland freshwater swamp in Chishang. It was not only with diverse ecology<br>
+    but also suitable for activities such as biking, bird watching and fishing. If you come in summer, you can join the<br>
+    Bamboo-Raft Festival and take the bamboo raft to tour around the pond.</font></p>
+    <ul>
+        <li>Best seasons: Summer and Autumn.</li>
+        <li>Transportation:
+            The nearest train station from this region is the Chishang station.<br>
+
+        </li>
+    </ul>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117444.50121777476!2d121.19829923625186!3d23.0919460761955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f0b770d2ee89b%3A0x27088c215b8996f0!2zOTU45Y-w5p2x57ij5rGg5LiK6YSJ!5e0!3m2!1szh-TW!2stw!4v1529299259443" 
+    width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

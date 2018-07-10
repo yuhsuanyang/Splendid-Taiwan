@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/north/leofoo1.jpg","./img/north/leofoo2.jpg","./img/north/leofoo3.jpg","./img/north/leofoo4.jpg","./img/north/leofoo5.jpg","./img/north/leofoo6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Leofoo Village Theme Park","Mighty Mountain Flume Adventure","Pagoda's Revenge","Big Canyon Rapids Ride",
+    "The are many wild animals in the park, such as the white tiger","The are many wild animals in the park, such as the hippos"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Leofoo Village Theme Park</font></p>
+    <p align="center">Hsinchu County</p>
+   <img src="./img/north/leofoo1.jpg" width="800" id="demo">
+   <p id="desc">Leofoo Village Theme Park</p>
+   <img src="./img/north/leofoo1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/north/leofoo2.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/north/leofoo3.jpg" width="130" onclick="change(2)" id="small2" >
+   <img src="./img/north/leofoo4.jpg" width="130" onclick="change(3)" id="small3" >
+   <img src="./img/north/leofoo5.jpg" width="130" onclick="change(4)" id="small4" >
+   <img src="./img/north/leofoo6.jpg" width="130" onclick="change(5)" id="small5" >
+   <p><font size="8">T</font><font size="3">The Leofoo Village Theme Park is an amusement park and a safari located in Guanxi Township. It was originally<br>
+    established in 1979 as Leofoo Wildlife Park. It 1989, the wildlife park was reestablished to Leofoo Village Theme Park. <br> 
+    The park is devided in four sections, including Arabian Kingdom, African Safari, South Pacific and Wild West.  <br>
+    There are different amusement facilities in each section. Among them, the African Safari section is a wild <br>
+    safari-themed area, featuring many animal-interactive attractions. 
+    </font></p>
+    <ul>
+        <li>Official Website: <a href="http://www1.leofoo.com.tw/village/en/">http://www1.leofoo.com.tw/village/en/</a></li>
+        <li>Best seasons: all year around</li>
+        <li>Transportation:
+            <br>  Take Taiwan Railway trains to Chungli Station, and switch to Hsinchu Bus #5653 to reach Leofoo Village Theme Park.
+
+        </li>
+    </ul>
+    
+</div>
+
+<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10695.795313871342!2d121.1803941517292!3d24.822484809451023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683c04ec22e057%3A0x41817b418be9e053!2sLeofoo+Village+Theme+Park!5e0!3m2!1sen!2stw!4v1530278294903" 
+        width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>

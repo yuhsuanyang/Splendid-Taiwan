@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/central/lotusforest1.jpg","./img/central/lotusforest2.jpg","./img/central/lotusforest3.JPG","./img/central/lotusforest4.jpg","./img/central/lotusforest5.jpg","./img/central/lotusforest6.jpg"]
+    var small=["small0","small1","small2","small3","small4","small5"]
+    var words=["Lotus Forest","Lotus Forest","Lotus Forest","Lotus Forest","Lotus Forest","Lotus Forest"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Lotus Forest</font></p>
+    <p align="center">Nantou County</p>
+   <img src="./img/central/lotusforest1.jpg"width="800" id="demo">
+   <p id="desc">Lotus Forest</p>
+   <img src="./img/central/lotusforest1.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/central/lotusforest2.jpg" width="130" onclick="change(1)" id="small1">
+   <img src="./img/central/lotusforest3.JPG" width="130" onclick="change(2)" id="small2">
+   <img src="./img/central/lotusforest4.jpg" width="130" onclick="change(3)" id="small3">
+   <img src="./img/central/lotusforest5.jpg" width="130" onclick="change(4)" id="small4">
+   <img src="./img/central/lotusforest6.jpg" width="130" onclick="change(5)" id="small5">
+   <p><font size="8">A</font><font size="3">Sanyi Township is a rural township in southern Miaoli County, Taiwan.<br>
+   It is famous for its mudiao (woodcarving) industry earning it the name the Woodcarving Kingdom of Taiwan.<br>
+	Longteng bridge is a famous spot in Sanyi, it was built in 1906 during Japanese rule, and was named Gyotōhei kyō.<br>
+	In April and May forests around the country turn white thanks to the Tung Blossoms that line mountains and hillsides.<br> 
+	People here in Taiwan often refer to the blossoms as "April Snow" or "May Snow"  </font></p>
+    <ul>
+        <li>Best seasons: summer</li>
+        <li>Transportation: TRA Miaoli station → Hsinchu Bus (bond for Sanyi) to Sanyi stop.
+           
+    </ul>
+    
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.214652324668!2d120.7926007111295!3d23.648720601367597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ed0c88ed932bf%3A0x2e0af5e833ebb889!2z5b-Y5oaC5qOu5p6X!5e0!3m2!1sen!2stw!4v1529662643297" width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe></body>
+</html>

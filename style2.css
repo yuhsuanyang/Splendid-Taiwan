@@ -1,0 +1,59 @@
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgba(128,138,135,0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+  
+  
+}
+
+.navbar ul {
+  float: right;
+  list-style-type: none;
+  
+}
+.navbar ul li{
+  
+  font-size: 20px;
+  float: right;
+  display: block;
+  padding: 5px 2px;
+}
+.navbar ul li a{
+  text-align: center;
+  font-family: monospace;
+  text-decoration: none;
+  color: #f2f2f2;
+  padding: 50px 12px;
+ 
+}
+.navbar ul li a:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+
+.splendidtaiwan {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 28px;	
+}
+
+input{
+  border-radius: 5px;
+  border: none;
+  font-size: 100%;
+  font-family: monospace;
+}
+
+
+

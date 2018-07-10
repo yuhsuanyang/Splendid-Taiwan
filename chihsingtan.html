@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>絕景台灣 Splendid Formosa</title>
+<style>
+    .map{
+        position: fixed;
+        top:35%;
+        right: 2%;
+    }
+</style>
+<script>
+    var photo=["./img/east/chihsingtan2.jpg","./img/east/chihsingtan1.jpg","./img/east/chihsingtan3.jpg"]
+    var small=["small0","small1","small2"]
+    var words=["Chihsingtan Beach","Chihsingtan Beach is coverd with gravels"," Half moon-like shape gulf"]
+    function change(x){
+        document.getElementById("demo").src=photo[x];
+        for(i = 0; i < small.length; i++){
+            document.getElementById("desc").innerHTML=words[x];
+            if(i==x){
+                document.getElementById(small[i]).style.opacity=0.5;
+            }else{
+                document.getElementById(small[i]).style.opacity=1;
+            }
+        }
+        
+
+    }
+</script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<span class="splendidtaiwan"><a href="index.html"><img src="./img/taiwanwebicon.png" width="50" height="50" ></a></img></span>
+		<ul>
+		  <li>
+			  <form action="index.php" method="POST">   
+				  <input type="text"  placeholder="search" name="input" action="index.php" method="POST" >
+				  <input type="submit" name="login" value="go">
+			  </form>
+		  </li>
+		  <li>
+			  <a href="languagelearning.html">language learning</a>  
+		  </li>
+		  <li>
+			  <a href="transportation.html">guideline</a><!--推薦行程-->
+		  </li>
+		  <li>
+			  <a href="destination.html">tourist destination</a>
+		  </li>
+		</ul>
+	</div>
+<div class="content">
+    <p align="center"><font size="6">Chihsingtan</font></p>
+    <p align="center">Hualien County</p>
+   <img src="./img/east/chihsingtan2.jpg"width="800" id="demo">
+   <p id="desc">Chihsingtan Beach</p>
+   <img src="./img/east/chihsingtan2.jpg" width="130" onclick="change(0)" id="small0">
+   <img src="./img/east/chihsingtan1.jpg" width="130" onclick="change(1)" id="small1" >
+   <img src="./img/east/chihsingtan3.jpg" width="130" onclick="change(2)" id="small2">
+   <p><font size="8">C</font><font size="3">hihsingtan Beach is the only county Scenic Area in Hualien County and faces the Pacific Ocean. The beach is <br>
+    famous for its half moon-like shape gulf and gravels. Geologically, the Chihsingtan Beach is a steeply descending beach, <br>
+	which causes the occurance of freak waves. For safety, all water sports and activities are banned in this area. All you can<br>
+	here is strolling at the beach and enjoy the landscape. The beach is considered to be one of the most dangerous beach <br>
+    in Taiwan, so all tourists visiting this area should watch out for the waves.</font></p>
+    <ul>
+        <li>Best seasons: Summer</li>
+        <li>Transportation: <br>
+            The beach is accessible within walking distance East from Beipu Station of Taiwan Railways Administration.
+           
+    </ul>
+    
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24336.5397246767!2d121.61128462592147!3d24.035888071157398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34689d87e68820f5%3A0xd027880d5fd378a!2sQixingtan+Beach!5e0!3m2!1szh-TW!2stw!4v1529289920218"
+     width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+      
+
+</body>
+</html>
