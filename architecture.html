@@ -9,7 +9,8 @@
     div.content{
         position: absolute;
         top:15%;
-        left: 42%;
+        left: 22%;
+		width: 50%;
     }
     #desc{
         color: white;
@@ -24,26 +25,41 @@
     div.gallery1{
         position: absolute;
         float: left;
-        top:30%;
+        width: 75vw;
+        top:35%;
         left: 10%;
         }
     .gallery1 img{
-        width:25%;
-        border-radius: 5%;
-        padding: 1%;
+        position: relative;
+        width:23vw;
+        border-radius: 12%;
+        padding: 10%;
         height: auto;
         }
+    .gallery1 div{
+        position: relative;
+        width:32%;
+        height: 100%;
+        float: left;
+        z-index: 0;
+    }
+    
     .desc1{
-        position: absolute; 
-        left: 2%;
+        position:absolute;
+        bottom:8%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
+        z-index: 1;
         }
     .desc2{
-        position: absolute; 
-        left: 29%;
-        }
-    .desc3{
-        position: absolute; 
-        left: 57%;
+        position:absolute;
+        bottom:0%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
         }
 </style>
 </head>
@@ -72,33 +88,16 @@
 	</div>
 <br><br>
 <div class="content">
-        <p ><font size="6">Architecture</font></p>
+        <p align="center"><font size="6">Architecture</font></p>
         <p ></p>
     </div>
     <div class="gallery1">
-        <a href="./ckmh.html" ><img src="./img/north/chongcheng.jpg"></a>
-        <a href="./101.html" ><img src="./img/north/101.jpg"></a>
-        <a href="chimei.html" ><img src="./img/south/chimei.jpg"></a>
-        <br>
-        <span class="desc1">
-            <p><font size="4">Chiang Kai-shek Memorial Hall</font></p>
-        </span>
-        <span class="desc2">
-                <p><font size="4">Taipei 101</font></p>
-        </span>
-        <span class="desc3">
-                <p><font size="4">Chimei Museum</font></p>
-        </span>
-        <br><br><br><br><br>
-    
-        <a href="formosa.html"><img src="./img/south/formosa.jpg"></a>
-        <br>
-        <span class="desc1">
-                <p><font size="4">Formosa Boulevard Station</font></p>
-                <p></p>
-        </span>
-    </div>
-
+            <div><a href="./ckmh.html" ><img src="./img/north/chongcheng.jpg"></a><span class="desc1"><p><font size="4">Chiang Kai-shek Memorial Hall</font></p></span></div>
+            <div> <a href="./101.html" ><img src="./img/north/101.jpg"></a></a><span class="desc1"><p><font size="4">Taipei 101</font></p></span></div>
+            <div><a href="chimei.html" ><img src="./img/south/chimei.jpg"></a><span class="desc1"><p><font size="4">Chimei Museum</font></p></span></div>
+            <div> <a href="formosa.html"><img src="./img/south/formosa.jpg"></a><span class="desc1"><p><font size="4">Formosa Boulevard Station</font></p></span></div>
+                
+        </div>
       
 
 </body>

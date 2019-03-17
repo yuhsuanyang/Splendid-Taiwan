@@ -25,27 +25,43 @@
     div.gallery1{
         position: absolute;
         float: left;
+        width: 75vw;
         top:35%;
         left: 10%;
         }
     .gallery1 img{
-        width:25%;
-        border-radius: 5%;
-        padding: 1%;
+        position: relative;
+        width:23vw;
+        border-radius: 12%;
+        padding: 10%;
         height: auto;
         }
+    .gallery1 div{
+        position: relative;
+        width:32%;
+        height: 100%;
+        float: left;
+        z-index: 0;
+    }
+    
     .desc1{
-        position: absolute; 
-        left: 2%;
+        position:absolute;
+        bottom:8%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
+        z-index: 1;
         }
     .desc2{
-        position: absolute; 
-        left: 29%;
+        position:absolute;
+        bottom:0%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
         }
-    .desc3{
-        position: absolute; 
-        left: 57%;
-        }
+    
 </style>
 </head>
 
@@ -77,31 +93,16 @@
     <p align="center">When a hundred of flowers bloom!</p>
 </div>
 <div class="gallery1">
-    <a href="ymmt.html"><img src="./img/north/yangmingmt.jpg"></a>
-    <a href="shimen.html"><img src="./img/north/shiman.jpg"></a>
-    <a href="wulingfarm.html"><img src="./img/central/woolin.jpg"></a>
-    <br>
-    <span class="desc1">
-        <p><font size="4">Yangmingshan National Park</font></p>
-        <p>Calla lily | Hydrangea</p>
-    </span>
-    <span class="desc2">
-        <p><font size="4">Shimen Reservior</font></p>
-        <p>Cherry Blossom | Chinese Fringetree</p>
-    </span>
-    <span class="desc3">
-        <p><font size="4">Wulin Farm</font></p>
-        <p>Cherry Blossom</p>
-    </span>
-    <br><br><br><br><br>
-    <a href="meinong.html"><img src="./img/south/meinung.jpg"></img></a>
-    <br>
-    <span class="desc1">
-        <p><font size="4">Meinung</font></p>
-        <p>Sunflower | Cosmos</p>
-    </span>
+    <div><a href="ymmt.html"><img src="./img/north/yangmingmt.jpg"></a><span class="desc1"><p><font size="4">Yangmingshan National Park</font></p></span>
+        <span class="desc2"><p style="color: black">Calla lily | Hydrangea</p></span></div>
+    <div><a href="shimen.html"><img src="./img/north/shiman.jpg"></a><span class="desc1"><p><font size="4">Shimen Reservior</font></p></span>
+        <span class="desc2"><p style="color: black">Cherry Blossom | Chinese Fringetree</p></span></div>
+    <div><a href="wulingfarm.html"><img src="./img/central/woolin.jpg"></a><span class="desc1"><p><font size="4">Wulin Farm</font></p></span>
+        <span class="desc2"><p style="color: black">Cherry Blossom</p></span></div>
+    <div><a href="meinong.html"><img src="./img/south/meinung.jpg"></img></a><span class="desc1"><p><font size="4">Meinung</font></p></span>
+        <span class="desc2"><p style="color: black">Sunflower | Cosmos</p></span></div>
+    
 </div>
-
       
 
 </body>

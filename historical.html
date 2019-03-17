@@ -9,7 +9,8 @@
     div.content{
         position: absolute;
         top:15%;
-        left: 42%;
+        left: 22%;
+		width: 50%;
     }
     #desc{
         color: white;
@@ -24,26 +25,41 @@
     div.gallery1{
         position: absolute;
         float: left;
-        top:30%;
+        width: 75vw;
+        top:35%;
         left: 10%;
         }
     .gallery1 img{
-        width:25%;
-        border-radius: 5%;
-        padding: 1%;
+        position: relative;
+        width:23vw;
+        border-radius: 12%;
+        padding: 10%;
         height: auto;
         }
+    .gallery1 div{
+        position: relative;
+        width:32%;
+        height: 100%;
+        float: left;
+        z-index: 0;
+    }
+    
     .desc1{
-        position: absolute; 
-        left: 2%;
+        position:absolute;
+        bottom:8%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
+        z-index: 1;
         }
     .desc2{
-        position: absolute; 
-        left: 29%;
-        }
-    .desc3{
-        position: absolute; 
-        left: 57%;
+        position:absolute;
+        bottom:0%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
         }
 </style>
 </head>
@@ -72,45 +88,22 @@
 	</div>
 <br><br>
 <div class="content">
-        <p><font size="6">Historical Sites</font></p>
-    </div>
-    <div class="gallery1">
-        <a href="./jiufen.html" ><img src="./img/north/jiufen.jpg"></a>
-        <a href="./taimsiu.html" ><img src="./img/north/taimsui.jpg"></a>
-        <a href="daxi.html" ><img src="./img/north/dahsi.jpg"></a>
-        <br>
-        <span class="desc1">
-                <p><font size="4">Jiufen</font></p>
-                <p>Jiufen Old Street | Gold Ecological Park</p>
-        </span>
-        <span class="desc2">
-                <p><font size="4">Taimsui</font></p>
-                <p>Fort San Domingo | Tamsui Old Street</p>
-        </span>
-        <span class="desc3">
-                <p><font size="4">Daxi</font></p>
-                <p>Daxi Old Street | Guesthouses of Chiang Kai-shek</p>
-        </span>
-        <br><br><br><br><br>
-    
-        <a href="lukang.html" ><img src="./img/central/lukang.jpg"></a>
-        <a href="anping.html" ><img src="./img/south/anping.jpg"></a>
-        <a href="lotuspond.html"><img src="./img/south/lotuspond.jpg"></a>
-        <br>
-        <span class="desc1">
-                <p><font size="4">Lukang</font></p>
-                <p>Lukang Old Street | Lukang Mazu Temple</p>
-        </span>
-        <span class="desc2">
-                <p><font size="4">Anping</font></p>
-                <p>Anping Old Street | Fort Zeelandia | <br>Anping Tree House</p>
-        </span>
-        <span class="desc3">
-                <p><font size="4">Lotus Pond</font></p>
-                <p>Confucius Temple</p>
-        </span>
-    </div>
-
+        <p align="center"><font size="6">Historical Sites</font></p>
+</div>
+<div class="gallery1">
+  <div><a href="./jiufen.html" ><img src="./img/north/jiufen.jpg"></a><span class="desc1"><p><font size="4">Jiufen</font></p></span>
+        <span class="desc2"><p style="color: black">Jiufen Old Street | Gold Ecological Park</p></span></div>
+    <div><a href="daxi.html" ><img src="./img/north/dahsi.jpg"></a><span class="desc1"><p><font size="4">Daxi</font></p></span>
+       <span class="desc2"><p style="color: black">Daxi Old Street | Guesthouses of Chiang Kai-shek</p></span></div>
+    <div><a href="anping.html" ><img src="./img/south/anping.jpg"></a><span class="desc1"><p><font size="4">Anping</font></p></span>
+        <span class="desc2"><p style="color: black">Anping Old Street | Fort Zeelandia | Tree House</p></span></div>
+    <div><a href="lukang.html" ><img src="./img/central/lukang.jpg"></a> <span class="desc1"><p><font size="4">Lukang</font></p></span>
+        <span class="desc2"><p style="color: black">Lukang Old Street | Lukang Mazu Temple</p></span></div>
+    <div><a href="./taimsiu.html" ><img src="./img/north/taimsui.jpg"></a><span class="desc1"><p><font size="4">Taimsui</font></p></span>
+        <span class="desc2"><p style="color: black">Fort San Domingo | Tamsui Old Street</p></span></div>   
+    <div><a href="lotuspond.html"><img src="./img/south/lotuspond.jpg"></a><span class="desc1"><p><font size="4">Lotus Pond</font></p></span>
+         <span class="desc2"><p style="color: black">Confucius Temple</p></span></div>
+</div>
       
 
 </body>

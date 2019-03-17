@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>絕景台灣 Splendid Formosa</title>
 <style>
-    div.content{
+     div.content{
         position: absolute;
         top:15%;
         left: 22%;
@@ -25,26 +25,41 @@
     div.gallery1{
         position: absolute;
         float: left;
-        top:30%;
+        width: 75vw;
+        top:35%;
         left: 10%;
         }
     .gallery1 img{
-        width:25%;
-        border-radius: 5%;
-        padding: 1%;
+        position: relative;
+        width:23vw;
+        border-radius: 12%;
+        padding: 10%;
         height: auto;
         }
+    .gallery1 div{
+        position: relative;
+        width:32%;
+        height: 100%;
+        float: left;
+        z-index: 0;
+    }
+    
     .desc1{
-        position: absolute; 
-        left: 2%;
+        position:absolute;
+        bottom:8%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
+        z-index: 1;
         }
     .desc2{
-        position: absolute; 
-        left: 29%;
-        }
-    .desc3{
-        position: absolute; 
-        left: 57%;
+        position:absolute;
+        bottom:0%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
         }
 </style>
 </head>
@@ -76,63 +91,27 @@
         <p align="center"><font size="6">Nights</font></p>
         <p align="center">Nightmarkets | Night Views</p>
     </div>
-    <div class="gallery1">
-        <a href="./hsiangshan.html" ><img src="./img/north/elephantmt.jpg"></a>
-        <a href="./101.html" ><img src="./img/north/101.jpg"></a>
-        <a href="./jiufen.html" ><img src="./img/north/jiufen.jpg"></a>
-        <br>
-        <span class="desc1">
-                <p><font size="4">Xsiangshan</font></p>
-                <p>Cityscape of Taipei</p>
-        </span>
-        <span class="desc2">
-                <p><font size="4">Taipei 101</font></p>
-                <p>Cityscape of Taipei</p>
-        </span>
-        <span class="desc3">
-                <p><font size="4">Jiufen</font></p>
-        </span>
-        <br><br><br><br><br>
     
-        <a href="./taimsiu.html" ><img src="./img/north/taimsui.jpg"></a>
-        <a href="shilin.html" ><img src="./img/north/shilin.jpg"></a>
-        <a href="lotong.html" ><img src="./img/north/lotung.jpg"></a> 
-        <br>
-        <span class="desc1">
-                <p><font size="4">Taimsui</font></p>
-                <p> Lover's Bridge | Fisherman's Wharf</p>
-        </span>
-        <span class="desc2">
-                <p><font size="4">Shilin Nightmarket</font></p>
-        </span>
-        <span class="desc3">
-                <p><font size="4">Lotung</font></p>
-                <p>Lotung Nightmarket</p>
-        </span>
-        <br><br><br><br><br>
-        <a href="fengjia.html" ><img src="./img/central/fengjia.jpg"></a>
-        <a href="chimei.html" ><img src="./img/south/chimei.jpg"></a>
-        <a href="loveriver.html" ><img src="./img/south/loveriver.jpg"></a>
-        <br>
-        <span class="desc1">
-                <p><font size="4">Fengjia Nightmarket</font></p>
-        </span>
-        <span class="desc2">
-                <p><font size="4">Chimei Museum</font></p>
-        </span>
-        <span class="desc3">
-                <p><font size="4">Love River</font></p>
-        </span>
-        <br><br><br><br><br>
-        <a href="kenting.html" ><img src="./img/south/kenting.jpg"></a>
-        <br>
-        <span class="desc1">
-                <p><font size="4">Kenting</font></p>
-                <p>Kenting Night Market</p>
-        </span>
-    </div>
-
-      
-
+    <div class="gallery1">
+                <div>  <a href="./hsiangshan.html" ><img src="./img/north/elephantmt.jpg"></a><span class="desc1"><p><font size="4">Xsiangshan</font></p></span>
+                    <span class="desc2"><p style="color: black">Cityscape of Taipei</p></span></div>
+                <div><a href="./101.html" ><img src="./img/north/101.jpg"></a><span class="desc1"><p><font size="4">Taipei 101</font></p></span>
+                    <span class="desc2"><p style="color: black">Cityscape of Taipei</p></span></div>
+                <div><a href="./jiufen.html" ><img src="./img/north/jiufen.jpg"></a><span class="desc1"><p><font size="4">Jiufen</font></p></span>
+                    <span class="desc2"><p style="color: black"></p></span></div>
+                <div><a href="shilin.html" ><img src="./img/north/shilin.jpg"></a><span class="desc1"><p><font size="4">Shilin Nightmarkets</font></p></span>
+                        <span class="desc2"><p style="color: black"></p></span></div>
+                <div> <a href="lotong.html" ><img src="./img/north/lotung.jpg"></a></a><span class="desc1"><p><font size="4">Lotung</font></p></span>
+                    <span class="desc2"><p style="color: black">Lotung Nightmarket</p></span></div>
+                <div> <a href="fengjia.html" ><img src="./img/central/fengjia.jpg"></a><span class="desc1"><p><font size="4">Fengjia Nightmarket</font></p></span>
+                    <span class="desc2"><p style="color: black"></p></span></div>
+                <div><a href="chimei.html" ><img src="./img/south/chimei.jpg"></a><span class="desc1"><p><font size="4">Chimei Museum</font></p></span>
+                    <span class="desc2"><p style="color: black"></p></span></div>
+                 <div><a href="loveriver.html" ><img src="./img/south/loveriver.jpg"></a><span class="desc1"><p><font size="4">Love River</font></p></span>
+                    <span class="desc2"><p style="color: black"></p></span></div>
+                <div> <a href="./taimsiu.html" ><img src="./img/north/taimsui.jpg"></a><span class="desc1"><p><font size="4">Taimsui</font></p></span>
+                        <span class="desc2"><p style="color: black">Lover's Bridge | Fisherman's Wharf</p></span></div>
+            </div>      
+    
 </body>
 </html>

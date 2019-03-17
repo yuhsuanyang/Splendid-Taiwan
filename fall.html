@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>絕景台灣 Splendid Formosa</title>
 <style>
-     div.content{
+      div.content{
         position: absolute;
         top:15%;
         left: 22%;
@@ -25,27 +25,43 @@
     div.gallery1{
         position: absolute;
         float: left;
+        width: 75vw;
         top:35%;
         left: 10%;
         }
     .gallery1 img{
-        width:25%;
-        border-radius: 5%;
-        padding: 1%;
+        position: relative;
+        width:23vw;
+        border-radius: 12%;
+        padding: 10%;
         height: auto;
         }
+    .gallery1 div{
+        position: relative;
+        width:32%;
+        height: 100%;
+        float: left;
+        z-index: 0;
+    }
+    
     .desc1{
-        position: absolute; 
-        left: 2%;
+        position:absolute;
+        bottom:8%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
+        z-index: 1;
         }
     .desc2{
-        position: absolute; 
-        left: 29%;
+        position:absolute;
+        bottom:0%;
+        left: 12%;
+        color: white;
+        font-size: 1vw;
+        float: left;
         }
-    .desc3{
-        position: absolute; 
-        left: 57%;
-        }
+    
 </style>
 </head>
 
@@ -77,22 +93,12 @@
     <p align="center">When the land turn orange!</p>
 </div>
 <div class="gallery1">
-    <a href="owenda.html"><img src="./img/central/owanda.jpg"></a>
-    <a href="chishang.html"><img src="./img/east/chishang.jpg"></a>
-    <a href="taimali.html"><img src="./img/east/taimali.jpg"></a>
-    <br>
-    <span class="desc1">
-        <p><font size="4">Owanda</font></p>
-        <p>Maple leaves</p>
-    </span>
-    <span class="desc2">
-        <p><font size="4">Chishang</font></p>
-        <p>Rice fields harvest</p>
-    </span>
-    <span class="desc3">
-        <p><font size="4">Taimali </font></p>
-        <p>Jean-Zen mountain</p>
-    </span>
+    <div><a href="owenda.html"><img src="./img/central/owanda.jpg"></a><span class="desc1"><p><font size="4">Owanda</font></p></span>
+        <span class="desc2"><p style="color: black">Maple leaves</p></span></div>
+    <div><a href="chishang.html"><img src="./img/east/chishang.jpg"></a><span class="desc1"><p><font size="4">Chishang</font></p></span>
+        <span class="desc2"><p style="color: black">Rice fields harvest</p></span></div>
+    <div> <a href="taimali.html"><img src="./img/east/taimali.jpg"></a><span class="desc1"><p><font size="4">Taimali </font></p></span>
+        <span class="desc2"><p style="color: black">Jean-Zen mountain</p></span></div>
 </div>
 
       

@@ -153,7 +153,9 @@
     }
 
     .container {
-      margin: 0 auto
+      margin: 0 auto;
+      width: 100%;
+      
     }
 
     /* For tablets & smart phones */
@@ -197,42 +199,47 @@
   </style>
   <style>
   
-  .gallery_go{
+  .gallery_go1{
         position: absolute;
         float: left;
-        top:20%;
-        left:0%;
-		z-index:-1;
+        top:500px;
+        z-index:-1;
+        width: 100%;
         }
-    .gallery_go_img{
-        width:30%;
+  .gallery_go2{
+        position: absolute;
+        float: left;
+        top:1200px;
+        z-index:-1;
+        width: 100%;
+        }
+  .gallery_go_img{
+        width:30vw;
         height: auto;
         border-radius: 20px;
         padding: 1%;
 		z-index:-1;
         }
+  
   .desc1{
         position: absolute;
-        top:41.5%;
-        left: 4%;
-        color: white;
+        top:0vh;
+        left: 0vw;
         font-size: 100%;
 		z-index:-1;
 		
         }
   .desc2{
         position: absolute;
-        top:41.5%;
-        left: 36.5%;
-        color: white;
+        top:0vh;
+        margin:0% 0% 0% 35vw;
         font-size: 100%;
 		z-index:-1;
         }
-    .desc3{
+  .desc3{
         position: absolute;
-        top:41.5%;
-        left: 69%;
-        color: white;
+        top:0vh;
+        right: 0vw;
         font-size: 100%;
 		z-index:-1;
         }
@@ -256,25 +263,22 @@
   </div>
   
   
-  <div class="gallery_go" align="center">
-    <br><br><br><br><br><br><br><br><br><br><br><img src="./img/east/tailugo.jpg" class="gallery_go_img">
-    <img src="./img/central/sunmoonlake.jpg" class="gallery_go_img">
-    <img src="./img/south/alimt.jpg" class="gallery_go_img">
-	<br><br><br><img src="./img/north/yehliu.jpg" class="gallery_go_img">
-    <img src="./img/east/chingsuei.jpg" class="gallery_go_img">
-    <img src="./img/central/lotusforest.jpg" class="gallery_go_img">
-</div>
-
-	<div>
-            <br><br><br><span style="color:gray;font-size:36px;font-family:monospace">&nbsp 1 </span>Taroko
-            <span style="color:gray;font-size:36px;font-family:monospace">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2 </span> Sun Moon Lake
-            <span style="color:gray;font-size:36px;font-family:monospace">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  3 </span>Mt.Alishan
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<span style="color:gray;font-size:36px;font-family:monospace">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4 </span> Yehliu
-            <span style="color:gray;font-size:36px;font-family:monospace">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  5 </span>Chingsuei
-		<span style="color:gray;font-size:36px;font-family:monospace">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  6 </span>Lotusforest	            
-	</div>
-
+  <div class="gallery_go1" align="center">
+      <div class="desc1"><span style="color:gray;font-size:36px;font-family:monospace"  align="center"> 1 </span>Taroko<br>
+        <a href="./taroko.html"><img src="./img/east/tailugo.jpg" class="gallery_go_img"></a></div>         
+      <div class="desc2"><span style="color:gray;font-size:36px;font-family:monospace"  align="center"> 2 </span> Sun Moon Lake<br>
+        <a href="./sunmoonlake.html"><img src="./img/central/sunmoonlake.jpg" class="gallery_go_img"></a></div>       
+      <div class="desc3"><span style="color:gray;font-size:36px;font-family:monospace"  align="center"> 3 </span>Mt.Alishan<br>
+        <a href="./alishan.html"><img src="./img/south/alimt.jpg" class="gallery_go_img"></a></div>    
+  </div>
+  <div class="gallery_go2" align="center">
+    <div class="desc1"><span style="color:gray;font-size:36px;font-family:monospace" align="center">4 </span> Yehliu<br>
+      <a href="./alishan.html"><img src="./img/north/yehliu.jpg" class="gallery_go_img"></a></div>
+   <div class="desc2"><span style="color:gray;font-size:36px;font-family:monospace"  align="center">5 </span>Chingsuei<br>
+    <a href="./alishan.html"><img src="./img/east/chingsuei.jpg" class="gallery_go_img"></a></div>
+    <div class="desc3"><span style="color:gray;font-size:36px;font-family:monospace"  align="center">6 </span>Lotusforest<br>
+      <a href="./alishan.html"><img src="./img/central/lotusforest.jpg" class="gallery_go_img"></a></div>
+  </div>
 
   
 </body>
